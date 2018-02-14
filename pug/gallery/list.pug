@@ -9,8 +9,8 @@ body
         .grid
             |
             | {{ $name := .Site.Params.galleryFolder }}
-            | {{ $path := "/gallery/" }}
-            | {{ $content := "/content" }}
+            | {{ $path := "gallery/" }}
+            | {{ $content := "/content/" }}
             | {{ $src := (print $path $name) }}
             |
             | {{ $folder := (print $content $path $name) }}
@@ -20,8 +20,8 @@ body
             | {{ range shuffle $files }}
             |
             div
-                a(href='{{ $src }}{{.Name }}')
-                    img(src='{{ $src }}{{.Name }}')
+                a(href='{{ $src | absURL }}{{.Name }}')
+                    img(src='{{ $src | absURL }}{{.Name }}')
             |
             | {{ end }}
         |
@@ -29,8 +29,8 @@ body
         .grid
             |
             | {{ $name := .Site.Params.galleryFolder }}
-            | {{ $path := "/gallery/" }}
-            | {{ $content := "/content" }}
+            | {{ $path := "gallery/" }}
+            | {{ $content := "/content/" }}
             | {{ $src := (print $path $name) }}
             |
             | {{ $folder := (print $content $path $name) }}
@@ -40,7 +40,7 @@ body
             | {{ range shuffle $files }}
             |
             div
-                img(src='{{ $src }}{{.Name }}')
+                img(src='{{ $src | absURL }}{{.Name }}')
             | {{ end }}
         | {{ end }}
         .section.bottom-menu
@@ -54,6 +54,6 @@ body
                 a(href='{{ .link }}') {{ .text }}
                 | {{ end }}
                 | &#183; 
-                a(href='/') {{ .Site.Params.homepage }}
+                a(href='{{.Site.BaseURL}}') {{ .Site.Params.homepage }}
         .section.footer
             | {{ partial "footer.html" . }}

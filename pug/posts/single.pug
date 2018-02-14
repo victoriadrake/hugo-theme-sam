@@ -19,7 +19,7 @@ body
         .section.bottom-menu
             hr
             p
-                a(href='/{{.Section}}') {{.Section}}
+                a(href='{{ .Section | relURL }}') back
                 |  &#183;
                 | {{ range first 1 .Site.Params.mainMenu }}
                 a(href='{{ .link }}') {{ .text }}
@@ -29,6 +29,6 @@ body
                 a(href='{{ .link }}') {{ .text }}
                 | {{ end }}
                 | &#183; 
-                a(href='/') {{ .Site.Params.homepage }}
+                a(href='{{.Site.BaseURL}}') {{ .Site.Params.homepage }}
         .section.footer
             | {{ partial "footer.html" . }}
