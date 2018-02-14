@@ -1,0 +1,12 @@
+name = "Call me Sam."
+license = "Creative Commons Attribution 3.0 Unported"
+licenselink = "https://github.com/hivickylai/hugo-theme-sam/blob/master/LICENSE.txt"
+description = "Simple And Minimalist theme for Hugo."
+homepage = "https://github.com/hivickylai/hugo-theme-sam"
+tags = ["clean", "simple", "blog", "portfolio", "flexbox", "css grid", "minimalist", "responsive", "syntax highlighting", "gallery", "starter"]
+features = ["responsive", "gallery"]
+min_version = "0.30"
+
+[author]
+  name = "Vicky Lai"
+  homepage = "https://vickylai.io"

@@ -1,0 +1,73 @@
+#splash
+    margin: auto 0
+    height: 100vh
+    width: 45%
+    overflow: hidden
+    @media screen and (max-width: 736px)
+        width: 90%
+
+#big-link
+    font-family: $font
+    font-size: 3rem
+    font-weight: 300
+    margin-bottom: 2rem
+    line-height: 1.5em
+
+#title
+    margin-top: 3rem
+    font-family: $font
+    font-size: 2rem
+    line-height: 3rem
+    margin-bottom: 2rem
+
+#content
+    margin: 2rem 0
+    line-height: 2em
+    letter-spacing: 2px
+    & h1,h2,h3
+        margin: 1em 0em
+        text-align: left
+    & p
+        margin-bottom: 1em
+        line-height: 1.8
+        letter-spacing: 1.5px
+    & pre
+        border-radius: 2px
+        background-color: lighten($dark-grey, 10%)
+        padding: 1rem
+    & pre > code
+        border: none
+    & code
+        font-size: 0.9rem
+        font-family: 'Source Code Pro', monospace
+        background-color: lighten($dark-grey, 10%)
+        padding: 0.2rem
+        border-radius: 2px
+        overflow-x: scroll
+
+#tag
+    padding: 0.25em 0em
+    margin-right: 0.5em
+    opacity: 0.6
+
+.grid
+    display: grid
+    grid-gap: 20px
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+    grid-auto-rows: 400px
+    @media screen and (max-width: 736px)
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr))
+
+.grid > div 
+    background-color: transparent
+    overflow: hidden
+
+.grid > div > img
+    height: 100%
+    width: 100%
+    object-fit: cover
+
+.grid > div > a > img
+    height: 100%
+    width: 100%
+    object-fit: cover

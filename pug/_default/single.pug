@@ -1,0 +1,22 @@
+| {{ partial "head.html" . }}
+
+body
+    .wrap
+        .section#title
+            | {{ .Title }}
+        .section#content
+            | {{ .Content }}
+        .section.bottom-menu
+            hr
+            p
+                | {{ range first 1 .Site.Params.mainMenu }}
+                a(href='{{ .link }}') {{ .text }}
+                | {{ end }}
+                | {{ range after 1 .Site.Params.mainMenu }}
+                | &#183; 
+                a(href='{{ .link }}') {{ .text }}
+                | {{ end }}
+                | &#183; 
+                a(href='/') {{ .Site.Params.homepage }}
+        .section.footer
+            | {{ partial "footer.html" . }}

@@ -1,0 +1,8 @@
+| {{ partial "head.html" . }}
+
+body
+    .section#splash
+        | {{ range .Site.Params.mainMenu }}
+        #big-link 
+            a(href='{{.link}}') {{.text}}
+        | {{ end }}
