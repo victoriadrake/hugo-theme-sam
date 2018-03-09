@@ -45,7 +45,37 @@
         border-radius: 2px
         overflow-x: scroll
     & img
+        width: 100%
         max-width: 100%
+        display: block
+        margin: 2rem auto
+    & blockquote
+        background-color: $links
+        color: $dark-grey
+        padding: 2rem
+        margin: 2rem 1rem 2rem 1rem
+        border-radius: 3px
+        & ul
+            margin-top: 1rem
+        & li
+            list-style: disc
+    & table
+        width: 100%
+        border-collapse: collapse
+        margin: 1rem 0
+        overflow-x: auto
+        th
+            font-size: 0.9rem
+        td, th
+            padding: 2px 5px
+            text-align: center
+            border: 1px solid $links
+    & li
+        list-style: disc inside
+        margin-left: 1rem
+        line-height: 2
+        &:last-child
+            margin-bottom: 1rem
 
 #tag
     padding: 0.25em 0em
