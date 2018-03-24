@@ -1,8 +1,10 @@
 | {{ partial "head.html" . }}
 
+{{ if isset .Site.Params "mainMenu" }}
 body
     .section#splash
         | {{ range .Site.Params.mainMenu }}
-        #big-link 
+        #big-link
             a(href='{{.link}}') {{.text}}
         | {{ end }}
+{{ end }}
