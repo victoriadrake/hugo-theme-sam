@@ -5,7 +5,7 @@ body
         .section#title
             | {{ .Title }}
         .section#content
-            | {{ .Date.Format .Site.Params.dateform }} &#183; {{ .WordCount }} words
+            | {{ .Date.Format (.Site.Params.dateform | default "Mon Jan 02, 2006") }} &#183; {{ .WordCount }} words
             |
             | {{ with .Params.tags }}
             div
@@ -21,14 +21,16 @@ body
             p
                 a(href='{{ .Section | relURL }}') back
                 |  &#183;
+            {{ if isset .Site.Params "mainMenu" }}
                 | {{ range first 1 .Site.Params.mainMenu }}
                 a(href='{{ .link }}') {{ .text }}
                 | {{ end }}
                 | {{ range after 1 .Site.Params.mainMenu }}
-                | &#183; 
+                | &#183;
                 a(href='{{ .link }}') {{ .text }}
                 | {{ end }}
-                | &#183; 
+            {{ end }}
+                | &#183;
                 a(href='{{.Site.BaseURL}}') {{ .Site.Params.homepage }}
         .section.footer
             | {{ partial "footer.html" . }}
