@@ -1,9 +1,9 @@
 {{ partial "head.html" . }}<body><div class="wrap"><div class="section" id="content"><h1>{{ .Title }}</h1><p>{{ .Content }}</p>{{ range .Data.Pages }}<li>
 {{ if .Params.showDate }}
 
-{{ .Date.Format .Site.Params.dateform }} --
+{{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006")}} --
 
-{{ end }}<a href="{{.Permalink}}">{{.Title}}</a></li>{{ end }}</div><div class="section bottom-menu"><hr/><p>{{ range first 1 .Site.Params.mainMenu }}<a href="{{ .link }}">{{ .text }}</a>{{ end }}
+{{ end }}<a href="{{.Permalink}}">{{.Title}}</a></li>{{ end }}</div>{{ if .Site.Params.mainMenu }}<div class="section bottom-menu"><hr/><p>{{ range first 1 .Site.Params.mainMenu }}<a href="{{ .link }}">{{ .text }}</a>{{ end }}
 {{ range after 1 .Site.Params.mainMenu }}
 &#183; <a href="{{ .link }}">{{ .text }}</a>{{ end }}
-&#183; <a href="{{.Site.BaseURL}}">{{ .Site.Params.homepage }}</a></p></div><div class="section footer">{{ partial "footer.html" . }}</div></div></body>
+&#183; <a href="{{.Site.BaseURL}}">{{ .Site.Params.homepage }}</a></p></div>{{ end }}<div class="section footer">{{ partial "footer.html" . }}</div></div></body>

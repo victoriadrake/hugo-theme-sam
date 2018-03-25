@@ -6,6 +6,7 @@ body
             | {{ .Title }}
         .section#content
             | {{ .Content }}
+        | {{ if .Site.Params.mainMenu }}
         .section.bottom-menu
             hr
             p
@@ -18,5 +19,6 @@ body
                 | {{ end }}
                 | &#183; 
                 a(href='{{.Site.BaseURL}}') {{ .Site.Params.homepage }}
+        | {{ end }}
         .section.footer
             | {{ partial "footer.html" . }}

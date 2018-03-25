@@ -1,6 +1,6 @@
 {{ partial "head.html" . }}<body><div class="wrap"><div class="section" id="content">{{ .Content }}</div>
 {{ if .Site.Params.clickablePhotos }}<div class="grid">
-{{ $name := .Site.Params.galleryFolder }}
+{{ $name := .Site.Params.galleryFolder | default "images/"}}
 {{ $path := "gallery/" }}
 {{ $content := "/content/" }}
 {{ $src := (print $path $name) }}
@@ -13,7 +13,7 @@
 <div><a href="{{ $src | absURL }}{{.Name }}"><img src="{{ $src | absURL }}{{.Name }}"/></a></div>
 {{ end }}</div>
 {{ else }}<div class="grid">
-{{ $name := .Site.Params.galleryFolder }}
+{{ $name := .Site.Params.galleryFolder | default "images/"}}
 {{ $path := "gallery/" }}
 {{ $content := "/content/" }}
 {{ $src := (print $path $name) }}
@@ -23,7 +23,8 @@
 {{ $files := readDir $folder }}
 
 {{ range shuffle $files }}
-<div><img src="{{ $src | absURL }}{{.Name }}"/></div>{{ end }}</div>{{ end }}<div class="section bottom-menu"><hr/><p>{{ range first 1 .Site.Params.mainMenu }}<a href="{{ .link }}">{{ .text }}</a>{{ end }}
+<div><img src="{{ $src | absURL }}{{.Name }}"/></div>{{ end }}</div>{{ end }}
+{{ if .Site.Params.mainMenu }}<div class="section bottom-menu"><hr/><p>{{ range first 1 .Site.Params.mainMenu }}<a href="{{ .link }}">{{ .text }}</a>{{ end }}
 {{ range after 1 .Site.Params.mainMenu }}
 &#183; <a href="{{ .link }}">{{ .text }}</a>{{ end }}
-&#183; <a href="{{.Site.BaseURL}}">{{ .Site.Params.homepage }}</a></p></div><div class="section footer">{{ partial "footer.html" . }}</div></div></body>
+&#183; <a href="{{.Site.BaseURL}}">{{ .Site.Params.homepage }}</a></p></div>{{ end }}<div class="section footer">{{ partial "footer.html" . }}</div></div></body>

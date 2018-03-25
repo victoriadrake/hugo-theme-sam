@@ -1,1 +1,5 @@
-{{ partial "head.html" . }}<body><div class="section" id="splash">{{ range .Site.Params.mainMenu }}<div id="big-link"> <a href="{{.link}}">{{.text}}</a></div>{{ end }}</div></body>
+{{ partial "head.html" . }}<body><div class="section" id="splash">{{ if .Site.Params.mainMenu }}
+{{ range .Site.Params.mainMenu }}<div id="big-link"> <a href="{{.link}}">{{.text}}</a></div>{{ end }}
+{{ else }}
+{{ range .Site.Sections }}<div id="big-link"> <a href="{{.Permalink}}">{{.Title}}</a></div>{{ end }}
+{{ end }}</div></body>

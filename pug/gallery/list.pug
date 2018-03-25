@@ -8,7 +8,7 @@ body
         | {{ if .Site.Params.clickablePhotos }}
         .grid
             |
-            | {{ $name := .Site.Params.galleryFolder }}
+            | {{ $name := .Site.Params.galleryFolder | default "images/"}}
             | {{ $path := "gallery/" }}
             | {{ $content := "/content/" }}
             | {{ $src := (print $path $name) }}
@@ -28,7 +28,7 @@ body
         | {{ else }}
         .grid
             |
-            | {{ $name := .Site.Params.galleryFolder }}
+            | {{ $name := .Site.Params.galleryFolder | default "images/"}}
             | {{ $path := "gallery/" }}
             | {{ $content := "/content/" }}
             | {{ $src := (print $path $name) }}
@@ -43,6 +43,7 @@ body
                 img(src='{{ $src | absURL }}{{.Name }}')
             | {{ end }}
         | {{ end }}
+        | {{ if .Site.Params.mainMenu }}
         .section.bottom-menu
             hr
             p
@@ -55,5 +56,6 @@ body
                 | {{ end }}
                 | &#183; 
                 a(href='{{.Site.BaseURL}}') {{ .Site.Params.homepage }}
+        | {{ end }}
         .section.footer
             | {{ partial "footer.html" . }}

@@ -10,11 +10,12 @@ body
                 |
                 | {{ if .Params.showDate }}
                 |
-                | {{ .Date.Format .Site.Params.dateform }} --
+                | {{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006")}} --
                 |
                 | {{ end }}
                 a(href='{{.Permalink}}') {{.Title}}
             | {{ end }}
+        | {{ if .Site.Params.mainMenu }}
         .section.bottom-menu
             hr
             p
@@ -27,5 +28,6 @@ body
                 | {{ end }}
                 | &#183; 
                 a(href='{{.Site.BaseURL}}') {{ .Site.Params.homepage }}
+        | {{ end }}
         .section.footer
             | {{ partial "footer.html" . }}
