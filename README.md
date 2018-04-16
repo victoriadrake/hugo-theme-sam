@@ -1,4 +1,4 @@
-# <a href="https://vickylai.io/call-me-sam/" target="_blank" rel="noopener">Call me Sam: a theme for Hugo</a>
+# <a href="https://vickylai.com/call-me-sam/" target="_blank" rel="noopener">Call me Sam: a theme for Hugo</a>
 
 ![Main page screenshot](https://github.com/hivickylai/hugo-theme-sam/blob/master/images/screenshot.png)
 
@@ -85,4 +85,4 @@ This theme is released under the [Creative Commons Attribution 3.0 license.](htt
 
 ## Contributing
 
-Pull requests for bug fixes and suggestions are welcome.
+Pull requests for bug fixes and enhancements are welcome.
