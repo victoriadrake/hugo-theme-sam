@@ -5,4 +5,4 @@
 {{ range first 1 .Site.Params.mainMenu }}<a href="{{ .link }}">{{ .text }}</a>{{ end }}
 {{ range after 1 .Site.Params.mainMenu }}
 &#183; <a href="{{ .link }}">{{ .text }}</a>{{ end }}
-&#183; <a href="{{.Site.BaseURL}}">{{ .Site.Params.homepage }}</a>{{ end }}</p></div><div class="section footer">{{ partial "footer.html" . }}</div></div></body>
+<br><a href="{{.Site.BaseURL}}">{{ .Site.Params.homepage }}</a>{{ end }}</p></div><div class="section footer">{{ partial "footer.html" . }}</div></div></body>
