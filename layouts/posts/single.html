@@ -3,6 +3,8 @@
 {{ with .Params.tags }}<div>{{ range . }}<span id="tag"><a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{.}}</a></span>{{ end }}</div>{{ end }}<hr/>{{ .Content }}</div><div class="section bottom-menu"><hr/><p><a href="{{ .Section | relURL }}">back</a>{{ if .Site.Params.mainMenu }}
  &#183;
 {{ range first 1 .Site.Params.mainMenu }}<a href="{{ .link }}">{{ .text }}</a>{{ end }}
+{{ if ( gt ( len .Site.Params.mainMenu ) 1 ) }}
 {{ range after 1 .Site.Params.mainMenu }}
 &#183; <a href="{{ .link }}">{{ .text }}</a>{{ end }}
+{{ end }}
 &#183; <a href="{{.Site.BaseURL}}">{{ .Site.Params.homepage }}</a>{{ end }}</p></div><div class="section footer">{{ partial "footer.html" . }}</div></div></body>
