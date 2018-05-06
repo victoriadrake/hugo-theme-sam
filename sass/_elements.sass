@@ -35,7 +35,6 @@
     & pre
         line-height: 2rem
         border-radius: 2px
-        background-color: lighten($dark-grey, 10%)
         padding: 1rem
         max-width: 100%
         overflow-x: scroll
@@ -44,9 +43,9 @@
     & code
         font-size: 0.9rem
         font-family: 'Source Code Pro', monospace
-        background-color: lighten($dark-grey, 10%)
-        padding: 0.2rem
-        border-radius: 2px
+        padding: 0.1rem
+        border-radius: 3px
+        border: 1px solid $links
     & img
         width: 100%
         max-width: 100%
@@ -80,6 +79,9 @@
         line-height: 2
         &:last-child
             margin-bottom: 1rem
+    & .highlight
+        max-width: 100%
+        color: $dark-grey
 
 #tag
     padding: 0.25em 0em
