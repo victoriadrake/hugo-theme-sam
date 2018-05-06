@@ -2,14 +2,14 @@ baseurl                 = "/"               # Your domain name. Must end with "/
 languageCode            = "en-us"
 title                   = "Call me Sam"
 theme                   = "sam"
+pygmentsStyle           = "manni"                     # https://help.farbox.com/pygments.html
+pygmentsCodefences      = true
 # googleAnalytics       = "xxx"             # Tracking code, eg. "UA-111111111-1"
 
 [params]
     dateform            = "Mon Jan 02, 2006"
     dateformfull        = "Mon Jan 2 2006 15:04:05 EST"
     favicon             = "/sam.ico"
-    pygmentsStyle       = "monokai"                     # https://help.farbox.com/pygments.html
-    pygmentsCodefences  = true
     homepage            = "main"                        # What to call the home page link
     galleryFolder       = "images/"                     # Where you've put your images, after "/content/gallery/"
     clickablePhotos     = true                          # Allow links to the full size images
