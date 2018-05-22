@@ -27,8 +27,7 @@ Features:
 
 From the root of your Hugo site:
 ```sh
-$ cd themes
-$ git clone https://github.com/vickylai/hugo-theme-sam.git sam
+$ git submodule add https://github.com/vickylai/hugo-theme-sam.git themes/sam
 ```
 
 ### 2. Configure your site
