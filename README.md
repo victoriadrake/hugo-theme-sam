@@ -1,12 +1,12 @@
 # <a href="https://vickylai.com/call-me-sam/" target="_blank" rel="noopener">Call me Sam: a theme for Hugo</a>
 
-![Main page screenshot](https://github.com/hivickylai/hugo-theme-sam/blob/master/images/screenshot.png)
+![Main page screenshot](https://github.com/vickylai/hugo-theme-sam/blob/master/images/screenshot.png)
 
 Sam is a Simple and Minimalist theme for Hugo. It lets you categorize and showcase your content the way you want to.
 
 Focused on content and typography, the stylized index page is really just a list of navigation links that you can set in your `config.toml`. This versatile design is limited only by your imagination, as you can make it say anything you like. Here are some ideas.
 
-![Index page iterations.](https://github.com/hivickylai/hugo-theme-sam/blob/master/images/ideas.png)
+![Index page iterations.](https://github.com/vickylai/hugo-theme-sam/blob/master/images/ideas.png)
 
 Features:
 - Showcase content
@@ -28,7 +28,7 @@ Features:
 From the root of your Hugo site:
 ```sh
 $ cd themes
-$ git clone https://github.com/hivickylai/hugo-theme-sam.git sam
+$ git clone https://github.com/vickylai/hugo-theme-sam.git sam
 ```
 
 ### 2. Configure your site
@@ -81,7 +81,7 @@ $ hugo new posts/your-post-title.md
 ```
 
 ## License
-This theme is released under the [Creative Commons Attribution 3.0 license.](https://github.com/hivickylai/hugo-theme-sam/blob/master/LICENSE.txt)
+This theme is released under the [Creative Commons Attribution 3.0 license.](https://github.com/vickylai/hugo-theme-sam/blob/master/LICENSE.txt)
 
 ## Contributing
 
