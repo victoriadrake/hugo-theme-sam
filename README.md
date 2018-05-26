@@ -18,7 +18,7 @@ Features:
 - Developer-approved
     - Syntax highlighting
     - Share-ready metadata set via `config.toml` (OpenGraph and Twitter Cards integration)
-    - Easy-to-navigate Sass files included
+    - Easy-to-navigate pug and Sass files included
 
 
 ## Quick start
@@ -80,8 +80,26 @@ To create a new post, run:
 $ hugo new posts/your-post-title.md
 ```
 
-## License
-This theme is released under the [Creative Commons Attribution 3.0 license.](https://github.com/vickylai/hugo-theme-sam/blob/master/LICENSE.txt)
+## Editing the theme
+
+All the theme's `pug` and `sass` files are included. You can compile these to HTML and CSS respectively using the npm scripts included in `package.json`.
+
+Prerequisites:
+* Node.js and npm: https://www.npmjs.com/get-npm
+
+To install all dependencies:
+
+```
+$ npm install
+```
+
+Available commands are:
+
+* `npm run build:pug` compiles pug files to HTML
+* `npm run build:sass` compiles Sass files to compressed CSS
+* `npm run autoprefixer` autoprefixes the compiled CSS
+* `npm run build` does all the above
+* `npm watch` watches Sass files for changes and automatically recompiles and autoprefixes the CSS
 
 ## Contributing
 
