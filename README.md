@@ -1,4 +1,4 @@
-![GitHub forks](https://img.shields.io/github/forks/badges/shields.svg?style=social&label=Fork) ![GitHub stars](https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Stars)
+![GitHub forks](https://img.shields.io/github/forks/vickylai/hugo-theme-sam.svg?style=social&label=Fork) ![GitHub stars](https://img.shields.io/github/stars/vickylai/hugo-theme-sam.svg?style=social&label=Stars)
 
 # <a href="https://vickylai.com/call-me-sam/" target="_blank" rel="noopener">Call me Sam: a theme for Hugo</a>
 
