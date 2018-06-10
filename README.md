@@ -105,6 +105,8 @@ Available commands are:
 
 Pull requests for bug fixes and enhancements are welcome.
 
+__Thank you to:__ @paskal, @crownsedge, @jazzi, @hakamadare, and @mfg92!
+
 ## License
 Copyright (C) 2018 Vicky Lai
 
