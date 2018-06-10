@@ -74,11 +74,16 @@
             text-align: center
             border: 1px solid $links
     & li
-        list-style: disc inside
-        margin-left: 1rem
         line-height: 2
+        padding-left: 0.4rem
         &:last-child
             margin-bottom: 1rem
+    & ul
+        list-style: disc outside
+        padding-left: 2rem
+    & ol
+        list-style: decimal outside
+        padding-left: 2rem
     & .highlight
         max-width: 100%
         color: $dark-grey
@@ -96,7 +101,7 @@
     @media screen and (max-width: 736px)
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr))
 
-.grid > div 
+.grid > div
     background-color: transparent
     overflow: hidden
 
