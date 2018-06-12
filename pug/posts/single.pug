@@ -17,22 +17,6 @@ body
             hr
             | {{ .Content }}
         .section.bottom-menu
-            hr
-            p
-                a(href='{{ .Section | relURL }}') back
-                | {{ if .Site.Params.mainMenu }}
-                |  &#183;
-                | {{ range first 1 .Site.Params.mainMenu }}
-                a(href='{{ .link }}') {{ .text }}
-                | {{ end }}
-                | {{ if ( gt ( len .Site.Params.mainMenu ) 1 ) }}
-                | {{ range after 1 .Site.Params.mainMenu }}
-                | &#183; 
-                a(href='{{ .link }}') {{ .text }}
-                | {{ end }}
-                | {{ end }}
-                | &#183; 
-                a(href='{{.Site.BaseURL}}') {{ .Site.Params.homepage }}
-                | {{ end }}
+              | {{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" true) }}
         .section.footer
             | {{ partial "footer.html" . }}
