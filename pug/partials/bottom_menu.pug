@@ -1,0 +1,23 @@
+| {{ if or ((.Page.Site.Params.mainMenu) (.show_back_menu_item)) }}
+hr
+p
+    | {{ end }}
+    | {{ if .show_back_menu_item }}
+    a(href='{{ .Page.Section | relURL }}') back
+    | {{ if .Page.Site.Params.mainMenu }}
+    |  &#183;
+    | {{ end }}
+    | {{ end }}
+    | {{ if .Page.Site.Params.mainMenu }}
+    | {{ range first 1 .Page.Site.Params.mainMenu }}
+    a(href='{{ .link }}') {{ .text }}
+    | {{ end }}
+    | {{ if ( gt ( len .Page.Site.Params.mainMenu ) 1 ) }}
+    | {{ range after 1 .Page.Site.Params.mainMenu }}
+    | &#183; 
+    a(href='{{ .link }}') {{ .text }}
+    | {{ end }}
+    | {{ end }}
+    | &#183; 
+    a(href='{{.Page.Site.BaseURL}}') {{ .Page.Site.Params.homepage }}
+    | {{ end }}

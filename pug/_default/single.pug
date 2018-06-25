@@ -8,19 +8,7 @@ body
             | {{ .Content }}
         | {{ if .Site.Params.mainMenu }}
         .section.bottom-menu
-            hr
-            p
-                | {{ range first 1 .Site.Params.mainMenu }}
-                a(href='{{ .link }}') {{ .text }}
-                | {{ end }}
-                | {{ if ( gt ( len .Site.Params.mainMenu ) 1 ) }}
-                | {{ range after 1 .Site.Params.mainMenu }}
-                | &#183; 
-                a(href='{{ .link }}') {{ .text }}
-                | {{ end }}
-                | {{ end }}
-                | &#183; 
-                a(href='{{.Site.BaseURL}}') {{ .Site.Params.homepage }}
+              | {{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" false) }}
         | {{ end }}
         .section.footer
             | {{ partial "footer.html" . }}
