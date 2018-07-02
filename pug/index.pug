@@ -4,12 +4,12 @@ body
     .section#splash
         | {{ if .Site.Params.mainMenu }}
         | {{ range .Site.Params.mainMenu }}
-        #big-link 
+        .big-link
             a(href='{{.link}}') {{.text}}
         | {{ end }}
         | {{ else }}
         | {{ range .Site.Sections }}
-        #big-link 
+        .big-link 
             a(href='{{.Permalink}}') {{.Title}}
         | {{ end }}
         | {{ end }}
