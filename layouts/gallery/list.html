@@ -10,7 +10,7 @@
 {{ $files := readDir $folder }}
 
 {{ range shuffle $files }}
-<div><a href="{{ $src | absURL }}{{.Name }}"><img src="{{ $src | absURL }}{{.Name }}"/></a></div>
+<div><a href="{{ $src | absURL }}{{ .Name }}"><img src="{{ $src | absURL }}{{ .Name }}" alt="{{ .Name }}"/></a></div>
 {{ end }}</div>
 {{ else }}<div class="grid">
 {{ $name := .Site.Params.galleryFolder | default "images/"}}
@@ -23,5 +23,5 @@
 {{ $files := readDir $folder }}
 
 {{ range shuffle $files }}
-<div><img src="{{ $src | absURL }}{{.Name }}"/></div>{{ end }}</div>{{ end }}
+<div><img src="{{ $src | absURL }}{{ .Name }}" alt="{{ .Name }}"/></div>{{ end }}</div>{{ end }}
 {{ if .Site.Params.mainMenu }}<div class="section bottom-menu">{{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" false) }}</div>{{ end }}<div class="section footer">{{ partial "footer.html" . }}</div></div></body>

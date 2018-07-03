@@ -20,8 +20,8 @@ body
             | {{ range shuffle $files }}
             |
             div
-                a(href='{{ $src | absURL }}{{.Name }}')
-                    img(src='{{ $src | absURL }}{{.Name }}')
+                a(href='{{ $src | absURL }}{{ .Name }}')
+                    img(src='{{ $src | absURL }}{{ .Name }}' alt='{{ .Name }}')
             |
             | {{ end }}
         |
@@ -40,7 +40,7 @@ body
             | {{ range shuffle $files }}
             |
             div
-                img(src='{{ $src | absURL }}{{.Name }}')
+                img(src='{{ $src | absURL }}{{ .Name }}' alt='{{ .Name }}')
             | {{ end }}
         | {{ end }}
         | {{ if .Site.Params.mainMenu }}
