@@ -1,3 +1,3 @@
 {{ partial "head.html" . }}<body><div class="wrap"><div class="section" id="title">{{ .Title }}</div><div class="section" id="content">{{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006") }} &#183; {{ .WordCount }} words
 
-{{ with .Params.tags }}<div>{{ range . }}<span id="tag"><a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{.}}</a></span>{{ end }}</div>{{ end }}<hr/>{{ .Content }}</div><div class="section bottom-menu">{{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" true) }}</div><div class="section footer">{{ partial "footer.html" . }}</div></div></body>
+{{ with .Params.tags }}<div>{{ range . }}<span class="tag"><a href="{{ "tags/" | absURL }}{{ . | urlize }}">{{.}}</a></span>{{ end }}</div>{{ end }}<hr/>{{ .Content }}</div><div class="section bottom-menu">{{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" true) }}</div><div class="section footer">{{ partial "footer.html" . }}</div></div></body>

@@ -10,7 +10,7 @@ body
             | {{ with .Params.tags }}
             div
                 | {{ range . }}
-                span#tag
+                span.tag
                     a(href!='{{ "tags/" | absURL }}{{ . | urlize }}') {{.}}
                 | {{ end }}
             | {{ end }}
