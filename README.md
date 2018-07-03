@@ -26,11 +26,14 @@ Focused on content and typography, the stylized index page is really just a list
 
 ## 1. Get the theme
 
-From the root of your Hugo site:
+Run from the root of your Hugo site:
 ```sh
-$ cd themes
-$ git clone https://github.com/vickylai/hugo-theme-sam.git sam
+$ git clone https://github.com/vickylai/hugo-theme-sam.git themes/sam
 ```
+Alternativly you can include this repository as a [git submodule](https://git-scm.com/book/de/v1/Git-Tools-Submodule). This makes it easier to update this theme if you have your Hugo site in git as well. For this you need to run:
+``sh
+$ git submodule add https://github.com/vickylai/hugo-theme-sam.git themes/sam
+``
 
 ## 2. Configure your site
 
