@@ -4,7 +4,7 @@ body
     .wrap
         .section#content
             h1 {{ .Title }}
-            p {{ .Content }}
+            | {{ .Content }}
             ul
                 | {{ range .Data.Pages }}
                 li

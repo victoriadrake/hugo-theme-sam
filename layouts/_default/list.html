@@ -1,4 +1,4 @@
-{{ partial "head.html" . }}<body><div class="wrap"><div class="section" id="content"><h1>{{ .Title }}</h1><p>{{ .Content }}</p><ul>{{ range .Data.Pages }}<li>
+{{ partial "head.html" . }}<body><div class="wrap"><div class="section" id="content"><h1>{{ .Title }}</h1>{{ .Content }}<ul>{{ range .Data.Pages }}<li>
 {{ if .Params.showDate }}
 
 {{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006")}} --
