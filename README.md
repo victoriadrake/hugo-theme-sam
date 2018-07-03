@@ -1,4 +1,4 @@
-# <a href="https://vickylai.com/call-me-sam/" target="_blank" rel="noopener">Call me Sam: a theme for Hugo</a>
+<h1><a href="https://vickylai.com/call-me-sam/" target="_blank" rel="noopener">Call me Sam: a theme for Hugo</a></h1>
 
 ![Main page screenshot](https://github.com/vickylai/hugo-theme-sam/blob/master/images/screenshot.png)
 
@@ -46,7 +46,7 @@ Where `page` can be anything you like. A contact page, a bio, dates for your upc
 
 ## 4. Design your main menu and index page
 
-In `config.toml`, customize the entries for `[[params.mainMenu]]` however you like. You can have as many or as few entries as you like. You can even include external links. 
+In `config.toml`, customize the entries for `[[params.mainMenu]]` however you like. You can have as many or as few entries as you like. You can even include external links.
 
 This list comprises the index page and part of the navigation menu at the bottom of single content pages. Here's an example:
 
@@ -68,7 +68,7 @@ This list comprises the index page and part of the navigation menu at the bottom
 
 Use Hugo's built-in server to see your site in action as you make changes.
 
-```
+```sh
 $ hugo serve -t sam
 ```
 
@@ -77,7 +77,7 @@ Visit `localhost:1313` in your browser to see a live preview of your site.
 ## Posts
 
 To create a new post, run:
-```
+```sh
 $ hugo new posts/your-post-title.md
 ```
 
@@ -90,7 +90,7 @@ Prerequisites:
 
 To install all dependencies:
 
-```
+```sh
 $ npm install
 ```
 
@@ -111,15 +111,4 @@ __Thank you to:__ @paskal, @crownsedge, @jazzi, @hakamadare, and @mfg92!
 # License
 Copyright (C) 2018 Vicky Lai
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU Affero General Public License as
-published by the Free Software Foundation, either version 3 of the
-License, or (at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Affero General Public License for more details.
-
-You should have received a copy of the GNU Affero General Public License
-along with this program.  If not, see <https://www.gnu.org/licenses/>.
+Licensed under [AGPL-3.0](https://github.com/vickylai/hugo-theme-sam/blob/master/LICENSE)
