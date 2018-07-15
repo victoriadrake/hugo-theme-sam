@@ -105,7 +105,7 @@ Available commands are:
 * `npm run build:sass` compiles Sass files to compressed CSS
 * `npm run autoprefixer` autoprefixes the compiled CSS
 * `npm run build` does all the above
-* `npm watch` watches Sass files for changes and automatically recompiles and autoprefixes the CSS
+* `npm run watch` watches Sass files for changes and automatically recompiles and autoprefixes the CSS
 
 # Contributing
 
