@@ -30,10 +30,12 @@ Run from the root of your Hugo site:
 ```sh
 $ git clone https://github.com/vickylai/hugo-theme-sam.git themes/sam
 ```
-Alternativly you can include this repository as a [git submodule](https://git-scm.com/book/de/v1/Git-Tools-Submodule). This makes it easier to update this theme if you have your Hugo site in git as well. For this you need to run:
-``sh
+
+Alternatively you can include this repository as a [git submodule](https://git-scm.com/book/de/v1/Git-Tools-Submodule). This makes it easier to update this theme if you have your Hugo site in git as well. For this you need to run:
+
+```sh
 $ git submodule add https://github.com/vickylai/hugo-theme-sam.git themes/sam
-``
+```
 
 ## 2. Configure your site
 
@@ -109,7 +111,7 @@ Available commands are:
 
 Pull requests for bug fixes and enhancements are welcome.
 
-__Thank you to:__ @paskal, @crownsedge, @jazzi, @hakamadare, and @mfg92!
+__Thank you to:__ @paskal, @crownsedge, @jazzi, @hakamadare, @mfg92, and @Hanzei!
 
 # License
 Copyright (C) 2018 Vicky Lai
