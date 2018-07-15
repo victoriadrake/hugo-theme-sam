@@ -8,7 +8,7 @@ body
             | {{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006") }} &#183; {{ .WordCount }} words
             |
             | {{ with .Params.tags }}
-            div
+            div.tag-container
                 | {{ range . }}
                 span.tag
                     a(href!='{{ "tags/" | absURL }}{{ . | urlize }}') {{.}}
