@@ -16,12 +16,21 @@ body
             | {{ $folder := (print $content $path $name) }}
             |
             | {{ $files := readDir $folder }}
+            | 
+            | {{ $previewSubdirectory := .Site.Params.smallImagesSubfolder | default "small/"}}
+            | {{ $previewImagesEnabled := .Site.Params.smallPreviewImages }}
             |
             | {{ range shuffle $files }}
             |
+            | {{ if not .IsDir }}
             div
                 a(href='{{ $src | absURL }}{{ .Name }}')
+                    | {{ if $previewImagesEnabled}}
+                    img(src='{{ $src | absURL }}{{ $previewSubdirectory }}{{ .Name }}' alt='{{ .Name }}')
+                    | {{ else }}
                     img(src='{{ $src | absURL }}{{ .Name }}' alt='{{ .Name }}')
+                    | {{ end }}
+            | {{ end }}
             |
             | {{ end }}
         |
@@ -39,8 +48,11 @@ body
             |
             | {{ range shuffle $files }}
             |
+            | {{ if not .IsDir }}
             div
                 img(src='{{ $src | absURL }}{{ .Name }}' alt='{{ .Name }}')
+            | {{ end }}
+            |
             | {{ end }}
         | {{ end }}
         | {{ if .Site.Params.mainMenu }}

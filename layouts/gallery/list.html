@@ -8,9 +8,14 @@
 {{ $folder := (print $content $path $name) }}
 
 {{ $files := readDir $folder }}
+ 
+{{ $previewSubdirectory := .Site.Params.smallImagesSubfolder | default "small/"}}
+{{ $previewImagesEnabled := .Site.Params.smallPreviewImages }}
 
 {{ range shuffle $files }}
-<div><a href="{{ $src | absURL }}{{ .Name }}"><img src="{{ $src | absURL }}{{ .Name }}" alt="{{ .Name }}"/></a></div>
+
+{{ if not .IsDir }}<div><a href="{{ $src | absURL }}{{ .Name }}">{{ if $previewImagesEnabled}}<img src="{{ $src | absURL }}{{ $previewSubdirectory }}{{ .Name }}" alt="{{ .Name }}"/>{{ else }}<img src="{{ $src | absURL }}{{ .Name }}" alt="{{ .Name }}"/>{{ end }}</a></div>{{ end }}
+
 {{ end }}</div>
 {{ else }}<div class="grid">
 {{ $name := .Site.Params.galleryFolder | default "images/"}}
@@ -23,5 +28,8 @@
 {{ $files := readDir $folder }}
 
 {{ range shuffle $files }}
-<div><img src="{{ $src | absURL }}{{ .Name }}" alt="{{ .Name }}"/></div>{{ end }}</div>{{ end }}
+
+{{ if not .IsDir }}<div><img src="{{ $src | absURL }}{{ .Name }}" alt="{{ .Name }}"/></div>{{ end }}
+
+{{ end }}</div>{{ end }}
 {{ if .Site.Params.mainMenu }}<div class="section bottom-menu">{{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" false) }}</div>{{ end }}<div class="section footer">{{ partial "footer.html" . }}</div></div></body>
