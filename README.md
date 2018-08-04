@@ -47,7 +47,7 @@ Run:
 ```sh
 $ hugo new page.md
 ```
-Where `page` can be anything you like. A contact page, a bio, dates for your upcoming world tour... Anything!
+Where `page` can be anything you like. A contact page, a bio, dates for your upcoming world tour... Anything!what I'd describe as line drawing, pretty whimsical and progressive illustration. 
 
 ## 4. Design your main menu and index page
 
@@ -111,7 +111,7 @@ Available commands are:
 
 Pull requests for bug fixes and enhancements are welcome.
 
-__Thank you to:__ @paskal, @crownsedge, @jazzi, @hakamadare, @mfg92, and @Hanzei!
+__Thank you to:__ @paskal, @crownsedge, @jazzi, @hakamadare, @mfg92, @Hanzei, and @lx4r!
 
 # License
 Copyright (C) 2018 Vicky Lai
