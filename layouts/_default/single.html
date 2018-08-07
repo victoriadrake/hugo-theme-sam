@@ -1,1 +1,3 @@
-{{ partial "head.html" . }}<body><div class="wrap"><div class="section" id="title">{{ .Title }}</div><div class="section" id="content">{{ .Content }}</div>{{ if .Site.Params.mainMenu }}<div class="section bottom-menu">{{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" false) }}</div>{{ end }}<div class="section footer">{{ partial "footer.html" . }}</div></div></body>
+{{ define "no-difference-to-baseof-here" }}
+<!-- These three lines are a workaround. They are needed to inherit from baseof without changing anything. -->
+{{ end }}
