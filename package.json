@@ -15,11 +15,11 @@
   "repository": "github:vickylai/hugo-theme-sam",
   "license": "AGPL-3.0-or-later",
   "devDependencies": {
-    "autoprefixer": "^8.5.1",
+    "autoprefixer": "^9.1.0",
     "chokidar-cli": "^1.2.0",
     "node-sass": "^4.9.0",
-    "postcss": "^6.0.22",
-    "postcss-cli": "^5.0.0",
+    "postcss": "^7.0.0",
+    "postcss-cli": "^6.0.0",
     "pug-cli": "^1.0.0-alpha6"
   }
 }
