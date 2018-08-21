@@ -1,6 +1,6 @@
-{{ partial "head.html" . }}<body><div class="wrap"><div class="section" id="content"><h1>{{ .Title }}</h1>{{ .Content }}<ul>{{ range .Data.Pages }}<li>
+{{ define "section_content" }}<div class="section" id="content">{{ .Content }}<ul>{{ range .Data.Pages }}<li>
 {{ if .Params.showDate }}
 
 {{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006")}} --
 
-{{ end }}<a href="{{.Permalink}}">{{.Title}}</a></li>{{ end }}</ul></div>{{ if .Site.Params.mainMenu }}<div class="section bottom-menu">{{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" false) }}</div>{{ end }}<div class="section footer">{{ partial "footer.html" . }}</div></div></body>
+{{ end }}<a href="{{.Permalink}}">{{.Title}}</a></li>{{ end }}</ul></div>{{ end }}

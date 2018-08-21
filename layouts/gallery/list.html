@@ -1,4 +1,4 @@
-{{ partial "head.html" . }}<body><div class="wrap"><div class="section" id="content">{{ .Content }}</div>
+{{ define "section_content" }}<div class="section" id="content">{{ .Content }}</div>
 {{ if .Site.Params.clickablePhotos }}<div class="grid">
 {{ $name := .Site.Params.galleryFolder | default "images/"}}
 {{ $path := "gallery/" }}
@@ -32,4 +32,4 @@
 {{ if not .IsDir }}<div><img src="{{ $src | absURL }}{{ .Name }}" alt="{{ .Name }}"/></div>{{ end }}
 
 {{ end }}</div>{{ end }}
-{{ if .Site.Params.mainMenu }}<div class="section bottom-menu">{{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" false) }}</div>{{ end }}<div class="section footer">{{ partial "footer.html" . }}</div></div></body>
+{{ end }}

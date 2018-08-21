@@ -1,14 +1,3 @@
-| {{ partial "head.html" . }}
-
-body
-    .wrap
-        .section#title
-            | {{ .Title }}
-        .section#content
-            | {{ .Content }}
-        | {{ if .Site.Params.mainMenu }}
-        .section.bottom-menu
-              | {{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" false) }}
-        | {{ end }}
-        .section.footer
-            | {{ partial "footer.html" . }}
+| {{ define "no-difference-to-baseof-here" }}
+| <!-- These three lines are a workaround. They are needed to inherit from baseof without changing anything. -->
+| {{ end }}
