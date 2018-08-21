@@ -15,11 +15,14 @@
   "repository": "github:vickylai/hugo-theme-sam",
   "license": "AGPL-3.0-or-later",
   "devDependencies": {
-    "autoprefixer": "^9.1.0",
+    "autoprefixer": "^9.1.2",
     "chokidar-cli": "^1.2.0",
-    "node-sass": "^4.9.0",
-    "postcss": "^7.0.0",
+    "node-sass": "^4.9.3",
+    "postcss": "^7.0.2",
     "postcss-cli": "^6.0.0",
     "pug-cli": "^1.0.0-alpha6"
+  },
+  "dependencies": {
+    "lodash": "^4.17.10"
   }
 }
