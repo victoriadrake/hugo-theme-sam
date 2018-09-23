@@ -7,6 +7,9 @@ html
         | {{ .Title }}
   body
       .section#splash
+          | {{ .Site.Params.introTitle }}
+          | {{ .Site.Params.introSubtitle }}
+          hr
           | {{ if .Site.Params.mainMenu }}
           | {{ range .Site.Params.mainMenu }}
           .big-link
@@ -14,7 +17,7 @@ html
           | {{ end }}
           | {{ else }}
           | {{ range .Site.Sections }}
-          .big-link 
+          .big-link
               a(href='{{.Permalink}}') {{.Title}}
           | {{ end }}
           | {{ end }}
