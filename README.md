@@ -86,6 +86,39 @@ To create a new post, run:
 $ hugo new posts/your-post-title.md
 ```
 
+## Image gallery
+
+To create an image gallery, place all the files you want included in a folder within `/content/gallery/`. The exampleSite has this configured as `images/` but you can change the name of this folder in `config.toml` if you wish.
+
+```
+content/
+ └── gallery/
+    └── images/
+        ├── file_1.jpg
+        ├── file_2.jpg
+        └── file_3.jpg
+```
+
+In `config.toml`, you can set `smallPreviewImages` to `true` in order to use small sized thumbnails. Include those thumbnail files in your gallery image folder. In exampleSite, this looks like:
+
+```
+content/
+ └── gallery/
+    └── images/
+        │   └── small/
+        |       ├── file_1.jpg
+        |       ├── file_2.jpg
+        |       └── file_3.jpg
+        ├── file_1.jpg
+        ├── file_2.jpg
+        └── file_3.jpg
+```
+
+The thumbnails need to have the same filenames as the larger images they represent.
+
+That's it! Sam's gallery layout template will automagically build the page from your images.
+
+
 # Editing the theme
 
 All the theme's `pug` and `sass` files are included. You can compile these to HTML and CSS respectively using the npm scripts included in `package.json`.
