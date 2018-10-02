@@ -19,7 +19,7 @@ Focused on content and typography, the stylized index page is really just a list
 - Developer-approved
     - Syntax highlighting
     - Share-ready metadata set via `config.toml` (OpenGraph and Twitter Cards integration)
-    - Easy-to-navigate pug and Sass files included
+    - Easy-to-navigate Sass files included
 
 
 # Quick start
@@ -47,7 +47,7 @@ Run:
 ```sh
 $ hugo new page.md
 ```
-Where `page` can be anything you like. A contact page, a bio, dates for your upcoming world tour... Anything!what I'd describe as line drawing, pretty whimsical and progressive illustration. 
+Where `page` can be anything you like. A contact page, a bio, dates for your upcoming world tour... Anything!
 
 ## 4. Design your main menu and index page
 
@@ -121,7 +121,7 @@ That's it! Sam's gallery layout template will automagically build the page from 
 
 # Editing the theme
 
-All the theme's `pug` and `sass` files are included. You can compile these to HTML and CSS respectively using the npm scripts included in `package.json`.
+All the theme's Sass files are included. You can compile these to CSS using the npm scripts included in `package.json`.
 
 Prerequisites:
 * Node.js and npm: https://www.npmjs.com/get-npm
@@ -134,7 +134,6 @@ $ npm install
 
 Available commands are:
 
-* `npm run build:pug` compiles pug files to HTML
 * `npm run build:sass` compiles Sass files to compressed CSS
 * `npm run autoprefixer` autoprefixes the compiled CSS
 * `npm run build` does all the above

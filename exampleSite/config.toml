@@ -1,32 +1,34 @@
-baseurl                  = "https://example.org/"               # Your domain name. Must end with "/"
-languageCode             = "en-us"
-title                    = "Call me Sam"
-theme                    = "sam"
-pygmentsStyle            = "monokai"                     # https://help.farbox.com/pygments.html
-pygmentsCodefences       = true
-# googleAnalytics        = "xxx"             # Tracking code, eg. "UA-111111111-1"
+baseurl                 = "/"               # Your domain name. Must end with "/"
+languageCode            = "en-us"
+defaultContentLanguage  = "en"
+isMultilingual          = false
+title                   = "Call me Sam"
+theme                   = "sam"
+pygmentsStyle           = "monokai"                     # https://help.farbox.com/pygments.html
+pygmentsCodefences      = true
+# googleAnalytics         = ""             # Tracking code, eg. "UA-111111111-1"
 
 [params]
-    dateform             = "Mon Jan 02, 2006"
-    dateformfull         = "Mon Jan 2 2006 15:04:05 EST"
-    favicon              = "/sam.ico"
-    homepage             = "main"                        # What to call the home page link
-    galleryFolder        = "images/"                     # Where you've put your images, after "/content/gallery/" (eg. "images/")
-    clickablePhotos      = true                          # Allow links to the full size images
-    smallPreviewImages   = true                          # Show thumbnails (small images) instead of using full size images on the gallery page
+    dateform            = "Mon Jan 02, 2006"
+    dateformfull        = "Mon Jan 2 2006 15:04:05 EST"
+    favicon             = "sam.ico"
+    homepage            = "main"                        # What to call the home page link
+    galleryFolder       = "images/"                     # Where you've put your images, after "/content/gallery/"
+    clickablePhotos     = false                          # Allow links to the full size images
+    smallPreviewImages   = true                         # Show small images from the subfolder instead of the big versions in the gallery
                                                          # Note: This will only become active if clickablePhotos is also true.
-    smallImagesSubfolder = "small/"                      # Folder for image thumbnails (small versions) after "/content/gallery/[galleryFolder]" (eg. "small/")
+    smallImagesSubfolder = "small/"                      # The subfolder for the small versions of the images under the gallery (with trailing slash)
                                                          # For each image the small version has to have the same filename as the big version.
-    footerText           = "Call me Sam, a theme for Hugo."
+    footerText          = "Call me Sam, a theme for Hugo."
 
 # Metadata
-    description          = "A new Hugo site."            # Max 160 characters show in search results
-    twitterCard          = "summary_large_image"         # Card value “summary”, “summary_large_image”, “app”, or “player”
-    primaryImage         = "/tn.png"                     # Image that shows on Twitter cards and OpenGraph links
+    description         = "A new Hugo site."            # Max 160 characters show in search results
+    twitterCard         = "summary_large_image"         # Card value “summary”, “summary_large_image”, “app”, or “player”
+    primaryImage        = "tn.png"                     # Image that shows on Twitter cards and OpenGraph links
 
 [[params.mainMenu]]
     link = "/posts"
-    text = "writing"
+    text = "posts"
 
 [[params.mainMenu]]
     link = "/gallery"
@@ -35,4 +37,3 @@ pygmentsCodefences       = true
 [[params.mainMenu]]
     link = "/about"
     text = "who is sam?"
-    

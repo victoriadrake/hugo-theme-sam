@@ -1,6 +1,19 @@
-{{ define "section_content" }}<div class="section" id="content">{{ .Content }}<ul>{{ range .Data.Pages }}<li>
-{{ if .Params.showDate }}
+{{ define "section_content" }}
+<div class="section" id="content">
+    {{ .Content }}
+    <ul>
+        {{ range .Data.Pages }}
+        <li>
+            {{ if .Params.showDate }}
 
-{{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006")}} --
+            {{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006")}} --
 
-{{ end }}<a href="{{.Permalink}}">{{.Title}}</a></li>{{ end }}</ul></div>{{ end }}
+            {{ end }}
+            <a href="{{.Permalink}}">
+                {{.Title}}
+            </a>
+        </li>
+        {{ end }}
+    </ul>
+</div>
+{{ end }}
