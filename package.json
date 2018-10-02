@@ -2,10 +2,9 @@
   "homepage": "https://github.com/vickylai/hugo-theme-sam",
   "bugs": "https://github.com/vickylai/hugo-theme-sam/issues",
   "scripts": {
-    "build:pug": "pug pug/ -o layouts/",
     "build:sass": "node-sass --output-style compressed -o static/css sass/",
     "autoprefixer": "postcss static/css/*.css --use autoprefixer -d static/css",
-    "build": "npm run build:pug && npm run build:sass && npm run autoprefixer",
+    "build": "npm run build:sass && npm run autoprefixer",
     "watch": "chokidar 'sass/*.sass' -c 'npm run build:sass && npm run autoprefixer'"
   },
   "author": {

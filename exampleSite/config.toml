@@ -1,4 +1,4 @@
-baseurl                 = "https://vickylai.com/call-me-sam/"               # Your domain name. Must end with "/"
+baseurl                 = "/"               # Your domain name. Must end with "/"
 languageCode            = "en-us"
 defaultContentLanguage  = "en"
 isMultilingual          = false
@@ -27,13 +27,13 @@ googleAnalytics         = "UA-98623582-1"             # Tracking code, eg. "UA-1
     primaryImage        = "tn.png"                     # Image that shows on Twitter cards and OpenGraph links
 
 [[params.mainMenu]]
-    link = "/call-me-sam/posts"
+    link = "/posts"
     text = "posts"
 
 [[params.mainMenu]]
-    link = "/call-me-sam/gallery"
+    link = "/gallery"
     text = "gallery"
 
 [[params.mainMenu]]
-    link = "/call-me-sam/about"
+    link = "/about"
     text = "who is sam?"
