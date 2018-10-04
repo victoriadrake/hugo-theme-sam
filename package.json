@@ -19,9 +19,6 @@
     "node-sass": "^4.9.3",
     "postcss": "^7.0.2",
     "postcss-cli": "^6.0.0",
-    "pug-cli": "^1.0.0-alpha6"
-  },
-  "dependencies": {
     "lodash": "^4.17.10"
   }
 }
