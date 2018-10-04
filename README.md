@@ -88,16 +88,29 @@ $ hugo new posts/your-post-title.md
 
 ## Image gallery
 
-To create an image gallery, place all the files you want included in a folder within `/content/gallery/`. The exampleSite has this configured as `images/` but you can change the name of this folder in `config.toml` if you wish.
+To create an image gallery, place all the files you want included in a folder within `/content/gallery/`. The exampleSite has this configured as `content/gallery/images/` but you can change the name of the "images" folder in `config.toml` if you wish.
 
 ```
 content/
  └── gallery/
     └── images/
-        ├── file_1.jpg
-        ├── file_2.jpg
-        └── file_3.jpg
+    |   ├── file_1.jpg
+    |   ├── file_2.jpg
+    |   └── file_3.jpg
+    └── _index.md
 ```
+
+The gallery title is defined in the front matter of `_index.md`. You can also optionally define the page URL using `url`:
+
+```
+---
+title: "Portraits"
+type: "gallery"
+url: "/portrait-gallery"
+---
+```
+
+In order to create more than one gallery, create multiple folders in `content/` with this file structure and `type: "gallery"` defined in the `_index.md` front matter.
 
 In `config.toml`, you can set `smallPreviewImages` to `true` in order to use small sized thumbnails. Include those thumbnail files in your gallery image folder. In exampleSite, this looks like:
 
