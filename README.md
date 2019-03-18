@@ -1,4 +1,4 @@
-<h1><a href="https://victoria.dev/call-me-sam/" target="_blank" rel="noopener">Call me Sam: a theme for Hugo</a></h1>
+<h1><a href="https://hugo-sam.netlify.com/" target="_blank" rel="noopener">Call me Sam: a theme for Hugo</a></h1>
 
 ![Main page screenshot](https://github.com/victoriadotdev/hugo-theme-sam/blob/master/images/screenshot.png)
 
