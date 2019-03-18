@@ -1,6 +1,6 @@
 {
-  "homepage": "https://github.com/vickylai/hugo-theme-sam",
-  "bugs": "https://github.com/vickylai/hugo-theme-sam/issues",
+  "homepage": "https://github.com/victoriadotdev/hugo-theme-sam",
+  "bugs": "https://github.com/victoriadotdev/hugo-theme-sam/issues",
   "scripts": {
     "build:sass": "node-sass --output-style compressed -o static/css sass/",
     "autoprefixer": "postcss static/css/*.css --use autoprefixer -d static/css",
@@ -8,8 +8,8 @@
     "watch": "chokidar 'sass/*.sass' -c 'npm run build:sass && npm run autoprefixer'"
   },
   "author": {
-    "name": "Vicky Lai",
-    "url": "https://vickylai.com"
+    "name": "Victoria Lai",
+    "url": "https://victoria.dev"
   },
   "repository": "github:vickylai/hugo-theme-sam",
   "license": "AGPL-3.0-or-later",
