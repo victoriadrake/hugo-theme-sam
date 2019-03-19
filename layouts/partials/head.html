@@ -18,7 +18,7 @@
 <meta name="og:image" itemprop="image primaryImageOfPage" content="{{.Site.Params.primaryImage | default "tn.png" | absURL}}">
 
 <link rel="shortcut icon" href="{{.Site.Params.favicon | default "sam.ico" | absURL }}" id="favicon">
-<link rel="stylesheet" href="{{ "css/style.css" | absURL}}">
+{{ partial "head/css.html" . }}
 <!-- Google fonts-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
 <!-- Global site tag (gtag.js) - Google Analytics -->

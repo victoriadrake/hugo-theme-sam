@@ -134,23 +134,7 @@ That's it! Sam's gallery layout template will automagically build the page from 
 
 # Editing the theme
 
-All the theme's Sass files are included. You can compile these to CSS using the npm scripts included in `package.json`.
-
-Prerequisites:
-* Node.js and npm: https://www.npmjs.com/get-npm
-
-To install all dependencies:
-
-```sh
-$ npm install
-```
-
-Available commands are:
-
-* `npm run build:sass` compiles Sass files to compressed CSS
-* `npm run autoprefixer` autoprefixes the compiled CSS
-* `npm run build` does all the above
-* `npm run watch` watches Sass files for changes and automatically recompiles and autoprefixes the CSS
+This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/) to compile, autoprefix, and minify its CSS styles from the included Sass files. You can run the built-in server to preview the site as you make changes to the Sass files!
 
 # Contributing
 
