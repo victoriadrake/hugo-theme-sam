@@ -18,8 +18,8 @@ Focused on content and typography, the stylized index page is really just a list
     - Custom footer text
 - Developer-approved
     - Syntax highlighting
-    - Share-ready metadata set via `config.toml` (OpenGraph and Twitter Cards integration)
-    - Easy-to-navigate Sass files included
+    - Share-ready pages with [Open Graph](https://gohugo.io/templates/internal/#open-graph) and [Twitter](https://gohugo.io/templates/internal/#twitter-cards) metadata you can customize in `config.toml` and page front-matter
+    - Effortless use of Hugo Pipes to generate CSS from Sass files
 
 
 # Quick start
@@ -88,7 +88,7 @@ $ hugo new posts/your-post-title.md
 
 ## Image gallery
 
-To create an image gallery, place all the files you want included in a folder within `/content/gallery/`. The exampleSite has this configured as `content/gallery/images/` but you can change the name of the "images" folder in `config.toml` if you wish.
+To create an image gallery, place all the files you want included in a folder within `content/gallery/`. The exampleSite has this configured as `content/gallery/images/` but you can change the name of the "images" folder in `config.toml` if you wish.
 
 ```
 content/
@@ -140,7 +140,7 @@ This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/) to comp
 
 Pull requests for bug fixes and enhancements are welcome.
 
-__Thank you to:__ @paskal, @crownsedge, @jazzi, @hakamadare, @mfg92, @Hanzei, and @lx4r!
+Open source themes like this one would not be possible without some amazing __[contributors](https://github.com/victoriadotdev/hugo-theme-sam/graphs/contributors)__. Thank you!
 
 # License
 Copyright (C) 2018 Victoria Lai
