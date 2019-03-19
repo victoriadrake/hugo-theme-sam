@@ -1,4 +1,6 @@
 <h1><a href="https://hugo-sam.netlify.com/" target="_blank" rel="noopener">Call me Sam: a theme for Hugo</a></h1>
+[![Build Status](https://travis-ci.com/victoriadotdev/hugo-theme-sam.svg?branch=master)](https://travis-ci.com/victoriadotdev/hugo-theme-sam)
+![Latest Release](https://img.shields.io/github/tag/victoriadotdev/hugo-theme-sam.svg)
 
 ![Main page screenshot](https://github.com/victoriadotdev/hugo-theme-sam/blob/master/images/screenshot.png)
 
