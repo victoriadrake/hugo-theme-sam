@@ -35,5 +35,9 @@ pygmentsCodefences       = true
     text = "gallery"
 
 [[params.mainMenu]]
+    link = "/portfolio"
+    text = "portfolio"
+
+[[params.mainMenu]]
     link = "/about"
     text = "who is sam?"
