@@ -6,7 +6,7 @@
 {{ if .Site.Params.clickablePhotos }}
     <div class="grid">
         {{ $name := .Site.Params.galleryFolder | default "images/"}}
-        {{ $path := "gallery/" }}
+        {{ $path := .File.Dir }}
         {{ $content := "/content/" }}
         {{ $src := (print $path $name) }}
 
