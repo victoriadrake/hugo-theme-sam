@@ -3,55 +3,27 @@
     {{ .Content }}
 </div>
 
-{{ if .Site.Params.clickablePhotos }}
+{{ if .Params.clickablePhotos }}
     <div class="grid">
-        {{ $name := .Site.Params.galleryFolder | default "images/"}}
-        {{ $path := .File.Dir }}
-        {{ $content := "/content/" }}
-        {{ $src := (print $path $name) }}
-
-        {{ $folder := (print $content $path $name) }}
-
-        {{ $files := readDir $folder }}
-
-        {{ $previewSubdirectory := .Site.Params.smallImagesSubfolder | default "small/"}}
-        {{ $previewImagesEnabled := .Site.Params.smallPreviewImages }}
-
-        {{ range shuffle $files }}
-
-        {{ if not .IsDir }}
-            
+    {{ $images := .Resources.ByType "image" }}
+    {{ range shuffle $images }}
+    {{ $resized := .Resize $.Params.maxWidth }}
         <div>
-                <a href="{{ $src | absURL }}{{ .Name }}">
-                    {{ if $previewImagesEnabled}}
-                    <img src="{{ $src | absURL }}{{ $previewSubdirectory }}{{ .Name }}" alt="{{ .Name }}" />
-                    {{ else }}
-                    <img src="{{ $src | absURL }}{{ .Name }}" alt="{{ .Name }}" />
-                    {{ end }}           
-                </a>
+            <a href="{{ .RelPermalink }}">
+                <img src="{{ $resized.RelPermalink }}" alt="{{ .Name }}" />     
+            </a>
         </div>
-        {{ end }}
-
         {{ end }}
     </div>
 {{ else }}
     <div class="grid">
-        {{ $name := .Site.Params.galleryFolder | default "images/"}}
-        {{ $path := .File.Dir }}
-        {{ $content := "/content/" }}
-        {{ $src := (print $path $name) }}
-
-        {{ $folder := (print $content $path $name) }}
-
-        {{ $files := readDir $folder }}
-
-        {{ range shuffle $files }}
-            {{ if not .IsDir }}
-            <div>
-                <img src="{{ $src | absURL }}{{ .Name }}" alt="{{ .Name }}" />
-            </div>
-            {{ end }}
-        {{ end }}
+    {{ $images := .Resources.ByType "image" }}
+    {{ range shuffle $images }}
+    {{ $resized := .Resize $.Params.maxWidth }}
+        <div>
+            <img src="{{ $resized.RelPermalink }}" alt="{{ .Name }}" />
+        </div>
+    {{ end }}
 
     </div>
 {{ end }}
