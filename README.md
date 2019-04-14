@@ -1,5 +1,6 @@
 <h1><a href="https://hugo-sam.netlify.com/" target="_blank" rel="noopener">Call me Sam: a theme for Hugo</a></h1>
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b069f23f-06c5-4af6-b1aa-6304d986f9b0/deploy-status)](https://app.netlify.com/sites/hugo-sam/deploys)
 [![Build Status](https://travis-ci.com/victoriadotdev/hugo-theme-sam.svg?branch=master)](https://travis-ci.com/victoriadotdev/hugo-theme-sam)
 ![Latest Release](https://img.shields.io/github/tag/victoriadotdev/hugo-theme-sam.svg)
 
@@ -15,7 +16,7 @@ Focused on content and typography, the stylized index page is really just a list
 
 - Showcase content
     - Content-focused page templates for list pages, single pages, and posts
-    - A responsive CSS grid gallery page that renders from a folder of images
+    - A responsive CSS grid gallery page that renders from images in your [Page Bundle](https://gohugo.io/content-management/organization/#page-bundles)
 - Customize
     - Custom navigation menu set via `config.toml`
     - Custom footer text
@@ -91,64 +92,55 @@ $ hugo new posts/your-post-title.md
 
 ## Image gallery
 
-To create an image gallery, place all the files you want included in a folder called "images" (you can change the name of the "images" folder in `config.toml` if you wish). Place your "images" folder in a subfolder of `content/` with any name. The directory structure then looks like this:
+To create an image gallery, place all the files you want included in your [Page Bundle](https://gohugo.io/content-management/organization/#page-bundles). The directory structure might then look like this:
 
 ```
 content/
  └── gallery/
-    └── images/
-    |   ├── file_1.jpg
-    |   ├── file_2.jpg
-    |   └── file_3.jpg
-    └── _index.md
+     └── _index.md
+     └── images/
+         ├── file_1.jpg
+         ├── file_2.jpg
+         └── file_3.jpg
 ```
 
-To automagically generate a gallery from the images, set `type: "gallery"` in the front-matter of `_index.md`. The gallery title is defined in the front-matter as well. You can also optionally define the page URL using `url`. Here is an example of a gallery's `_index.md`:
+To automagically generate a gallery from the images, set `type: "gallery"` in the front-matter of `_index.md`. You can also set other options for the gallery:
 
-```
+* The gallery `title`
+* The page link with `url`
+* The `maxWidth` of the resized images
+* Whether you want the images to link to the full size files, with `clickablePhotos`
+
+Here is an example of a gallery's `_index.md`:
+
+```yaml
 ---
 title: "Portraits"
 type: "gallery"
 url: "/portrait-gallery"
+maxWidth: "800x"
+clickablePhotos: true
 ---
 ```
 
-In order to create more than one gallery, create multiple subfolders in `content/` with this file structure and `type: "gallery"` defined in the `_index.md` front matter. For example:
-
+In order to create more than one gallery, create multiple Page Bundles with images and `type: "gallery"` defined in the `_index.md` front matter. For example:
 
 ```
 content/
  | └── gallery/
- |    └── images/
- |    |   ├── file_1.jpg
- |    |   ├── file_2.jpg
- |    |   └── file_3.jpg
- |    └── _index.md
+ |     └── _index.md
+ |     └── images/
+ |         ├── file_1.jpg
+ |         ├── file_2.jpg
+ |         └── file_3.jpg
  |
  └── portfolio/
-    └── images/
-    |   ├── file_1.jpg
-    |   ├── file_2.jpg
-    |   └── file_3.jpg
-    └── _index.md
+     └── _index.md
+     └── images/
+         ├── file_1.jpg
+         ├── file_2.jpg
+         └── file_3.jpg
 ```
-
-In `config.toml`, you can set `smallPreviewImages` to `true` in order to use small sized thumbnails. Include those thumbnail files in your gallery image folder. In exampleSite, this looks like:
-
-```
-content/
- └── gallery/
-    └── images/
-        │   └── small/
-        |       ├── file_1.jpg
-        |       ├── file_2.jpg
-        |       └── file_3.jpg
-        ├── file_1.jpg
-        ├── file_2.jpg
-        └── file_3.jpg
-```
-
-The thumbnails need to have the same filenames as the larger images they represent.
 
 That's it! Sam's gallery layout template will automagically build the page from your images.
 

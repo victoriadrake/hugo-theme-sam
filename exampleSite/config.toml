@@ -13,12 +13,6 @@ pygmentsCodefences       = true
     dateformfull         = "Mon Jan 2 2006 15:04:05 EST"
     favicon              = "sam.ico"
     homepage             = "main"                           # What to call the home page link
-    galleryFolder        = "images/"                        # Where you've put your images, after "/content/gallery/"
-    clickablePhotos      = false                            # Allow links to the full size images
-    smallPreviewImages   = true                             # Show small images from the subfolder instead of the big versions in the gallery
-                                                            # Note: This will only become active if clickablePhotos is also true.
-    smallImagesSubfolder = "small/"                         # The subfolder for the small versions of the images under the gallery (with trailing slash)
-                                                            # For each image the small version has to have the same filename as the big version.
     footerText           = "Call me Sam, a theme for Hugo."
 
 # Metadata for Open Graph and Twitter
@@ -41,3 +35,6 @@ pygmentsCodefences       = true
 [[params.mainMenu]]
     link = "/about"
     text = "who is sam?"
+
+[imaging]
+    quality = 75
