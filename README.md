@@ -156,6 +156,6 @@ Pull requests for bug fixes and enhancements are welcome.
 Open source themes like this one would not be possible without some amazing __[contributors](https://github.com/victoriadotdev/hugo-theme-sam/graphs/contributors)__. Thank you!
 
 # License
-Copyright (C) 2018 Victoria Lai
+Copyright (C) 2018 Victoria Drake
 
 Licensed under [AGPL-3.0](https://github.com/victoriadotdev/hugo-theme-sam/blob/master/LICENSE)
