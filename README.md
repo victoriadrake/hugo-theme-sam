@@ -1,16 +1,16 @@
 <h1><a href="https://hugo-sam.netlify.com/" target="_blank" rel="noopener">Call me Sam: a theme for Hugo</a></h1>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/b069f23f-06c5-4af6-b1aa-6304d986f9b0/deploy-status)](https://app.netlify.com/sites/hugo-sam/deploys)
-[![Build Status](https://travis-ci.com/victoriadotdev/hugo-theme-sam.svg?branch=master)](https://travis-ci.com/victoriadotdev/hugo-theme-sam)
-![Latest Release](https://img.shields.io/github/tag/victoriadotdev/hugo-theme-sam.svg)
+[![Build Status](https://travis-ci.com/victoriadrake/hugo-theme-sam.svg?branch=master)](https://travis-ci.com/victoriadrake/hugo-theme-sam)
+![Latest Release](https://img.shields.io/github/tag/victoriadrake/hugo-theme-sam.svg)
 
-![Main page screenshot](https://github.com/victoriadotdev/hugo-theme-sam/blob/master/images/screenshot.png)
+![Main page screenshot](https://github.com/victoriadrake/hugo-theme-sam/blob/master/images/screenshot.png)
 
 Sam is a Simple and Minimalist theme for Hugo. It lets you categorize and showcase your content the way you want to.
 
 Focused on content and typography, the stylized index page is really just a list of navigation links that you can set in your `config.toml`. This versatile design is limited only by your imagination, as you can make it say anything you like. Here are some ideas.
 
-![Index page iterations.](https://github.com/victoriadotdev/hugo-theme-sam/blob/master/images/ideas.png)
+![Index page iterations.](https://github.com/victoriadrake/hugo-theme-sam/blob/master/images/ideas.png)
 
 # Features:
 
@@ -32,13 +32,13 @@ Focused on content and typography, the stylized index page is really just a list
 
 Run from the root of your Hugo site:
 ```sh
-$ git clone https://github.com/victoriadotdev/hugo-theme-sam.git themes/sam
+$ git clone https://github.com/victoriadrake/hugo-theme-sam.git themes/sam
 ```
 
 Alternatively you can include this repository as a [git submodule](https://git-scm.com/book/de/v1/Git-Tools-Submodule). This makes it easier to update this theme if you have your Hugo site in git as well. For this you need to run:
 
 ```sh
-$ git submodule add https://github.com/victoriadotdev/hugo-theme-sam.git themes/sam
+$ git submodule add https://github.com/victoriadrake/hugo-theme-sam.git themes/sam
 ```
 
 ## 2. Configure your site
@@ -153,9 +153,9 @@ This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/) to comp
 
 Pull requests for bug fixes and enhancements are welcome.
 
-Open source themes like this one would not be possible without some amazing __[contributors](https://github.com/victoriadotdev/hugo-theme-sam/graphs/contributors)__. Thank you!
+Open source themes like this one would not be possible without some amazing __[contributors](https://github.com/victoriadrake/hugo-theme-sam/graphs/contributors)__. Thank you!
 
 # License
-Copyright (C) 2018 Victoria Drake
+Copyright (C) 2018-2019 Victoria Drake
 
-Licensed under [AGPL-3.0](https://github.com/victoriadotdev/hugo-theme-sam/blob/master/LICENSE)
+Licensed under [AGPL-3.0](https://github.com/victoriadrake/hugo-theme-sam/blob/master/LICENSE)
