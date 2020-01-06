@@ -1,19 +1,21 @@
 {{ define "section_content" }}
-<div class="section" id="content">
-    {{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006") }} &#183; {{ .WordCount }} words
-    {{ with .Params.tags }}
-    <div class="tag-container">
-        {{ range . }}
-        <span class="tag">
-            <a href="{{ "tags/" | absURL }}{{ . | urlize }}">
-                {{.}}
-            </a>
-        </span>
+<div style="text-align: justify;">
+    <div class="section" id="content">
+        {{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006") }} &#183; {{ .WordCount }} words
+        {{ with .Params.tags }}
+        <div class="tag-container">
+            {{ range . }}
+            <span class="tag">
+                <a href="{{ "tags/" | absURL }}{{ . | urlize }}">
+                    {{.}}
+                </a>
+            </span>
+            {{ end }}
+        </div>
         {{ end }}
+        <hr/>
+        {{ .Content }}
     </div>
-    {{ end }}
-    <hr/>
-    {{ .Content }}
 </div>
 {{ end }}
 
