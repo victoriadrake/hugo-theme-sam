@@ -113,11 +113,10 @@ To create an image gallery, place all the files you want included in your [Page 
 ```sh
 content/
  └── gallery/
-     └── _index.md
-     └── images/
-         ├── file_1.jpg
-         ├── file_2.jpg
-         └── file_3.jpg
+      ├── _index.md
+      ├── file_1.jpg
+      ├── file_2.jpg
+      └── file_3.jpg
 ```
 
 To automagically generate a gallery from the images, set `type: "gallery"` in the front-matter of `_index.md`. You can also set other options for the gallery:
@@ -143,19 +142,17 @@ In order to create more than one gallery, create multiple Page Bundles with imag
 
 ```
 content/
- | └── gallery/
- |     └── _index.md
- |     └── images/
- |         ├── file_1.jpg
- |         ├── file_2.jpg
- |         └── file_3.jpg
+ ├── gallery/
+ |   ├── _index.md
+ |   ├── file_1.jpg
+ |   ├── file_2.jpg
+ |   └── file_3.jpg
  |
  └── portfolio/
-     └── _index.md
-     └── images/
-         ├── file_1.jpg
-         ├── file_2.jpg
-         └── file_3.jpg
+     ├── _index.md
+     ├── file_1.jpg
+     ├── file_2.jpg
+     └── file_3.jpg
 ```
 
 That's it! Sam's gallery layout template will automagically build the page from your images.
