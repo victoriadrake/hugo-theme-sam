@@ -28,16 +28,22 @@ Focused on content and typography, the stylized index page is really just a list
 ## Quick start
 
 ## Requirements
+
 - Extended version of [Hugo](https://gohugo.io/getting-started/installing/) (latest version recommended)
-- [autoprefixer](https://github.com/postcss/autoprefixer): `npm install -g autoprefixer`
+
+Extended Hugo's [PostCSS](https://gohugo.io/hugo-pipes/postcss/) requires JavaScript packages to compile the styles for this theme. You can install them using `npm`:
+
 - [postcss-cli](https://github.com/postcss/postcss-cli):`npm install -g postcss-cli`
+- [autoprefixer](https://github.com/postcss/autoprefixer): `npm install -g autoprefixer`
+
+[Learn how to install and use npm here](https://www.npmjs.com/get-npm).
 
 Note: If you are using [Hugo as a snap app](https://snapcraft.io/hugo), the above two Node.js packages have to be [installed locally inside `exampleSite`](https://gohugo.io/hugo-pipes/postcss/).
 
 ```sh
 cd exampleSite/
-npm install autoprefixer
 npm install postcss-cli
+npm install autoprefixer
 ```
 
 ## 1. Get the theme
