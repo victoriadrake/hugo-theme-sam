@@ -181,4 +181,4 @@ Open source themes like this one would not be possible without some amazing __[c
 
 Copyright (C) 2018-2020 Victoria Drake
 
-Licensed under [AGPL-3.0](https://github.com/victoriadrake/hugo-theme-sam/blob/master/LICENSE)
+Licensed under [Apache-.0](https://github.com/victoriadrake/hugo-theme-sam/blob/master/LICENSE)
