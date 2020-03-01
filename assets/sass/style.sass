@@ -24,10 +24,12 @@ body
     justify-content: space-between
     align-items: center
     opacity: 1
+    padding: 6em 1em
+    @media screen and (max-width: 736px)
+        padding: 3em 1em
 
 h1,h2,h3
     margin-bottom: 0.5em
-    text-align: center
     font-family: 'Didact Gothic', sans-serif
     opacity: 0.6
 
@@ -66,12 +68,14 @@ hr
     +skinny-hr
     opacity: 0.3
 
+nav
+    margin: 1em auto
+
 .wrap
     margin: 0 auto
-    margin-top: 6rem
     width: 45%
+    max-width: 64em
     @media screen and (max-width: 736px)
-        padding: 1rem
         width: 100%
 
 .tag-container
@@ -85,7 +89,7 @@ hr
     position: relative
     bottom: 0
 
-.section
+.flex-container
     display: flex
     flex-direction: column
     justify-content: center
@@ -96,7 +100,6 @@ hr
     flex-direction: column
     justify-content: center
     align-items: center
-    padding-top: 3rem
     text-align: center
 
 .footer
@@ -108,7 +111,7 @@ hr
     background-color: transparent
     position: relative
     bottom: 0
-    padding: 3rem 1rem
+    padding: 1rem
     font-family: $font
     font-size: 1rem
     line-height: 1em

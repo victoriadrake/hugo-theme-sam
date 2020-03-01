@@ -20,8 +20,8 @@
     line-height: 3rem
     margin-bottom: 2rem
 
-#content
-    margin: 2rem 0
+article
+    width: 100%
     line-height: 2em
     letter-spacing: 2px
     div
@@ -32,8 +32,9 @@
         margin: 1em 0em
         text-align: left
     & p
+        display: block
         margin-bottom: 1em
-        line-height: 1.8
+        line-height: 1.6
         letter-spacing: 1.5px
         opacity: 0.8
     & .highlight
@@ -95,7 +96,7 @@
         list-style: decimal outside
         padding-left: 2rem
     & .gist
-        width: 100%
+        max-width: 100%
         td, th
             text-align: left
             border: 0
@@ -111,6 +112,7 @@
     opacity: 0.6
 
 .grid
+    margin: 1em auto
     display: grid
     grid-gap: 20px
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))

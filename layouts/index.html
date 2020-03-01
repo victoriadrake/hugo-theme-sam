@@ -1,31 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        {{ partial "head.html" . }}
-        <title>{{ .Title }}</title>
-    </head>
-    <body>
-        <div class="section" id="splash">
 
-            {{ if .Site.Params.mainMenu }}
-                {{ range .Site.Params.mainMenu }}
-                    <div class="big-link">
-                        <a href="{{.link}}">
-                            {{.text}}
-                        </a>
-                    </div>
-                {{ end }}
+<head>
+    {{ partial "head.html" . }}
+    <title>{{ .Title }}</title>
+</head>
 
-            {{ else }}
-                {{ range .Site.Sections }}
-                    <div class="big-link"> 
-                        <a href="{{.RelPermalink}}">
-                            {{.Title}}
-                        </a>
-                    </div>
-                {{ end }}
-            {{ end }}
-            
-        </div>
-    </body>
+<body>
+    <nav role="navigation" class="flex-container" id="splash">
+
+        {{ if .Site.Params.mainMenu }}
+        {{ range .Site.Params.mainMenu }}
+            <a href="{{.link}}" class="big-link">
+                {{.text}}
+            </a>
+        {{ end }}
+
+        {{ else }}
+        {{ range .Site.Sections }}
+            <a href="{{.RelPermalink}}" class="big-link">
+                {{.Title}}
+            </a>
+        {{ end }}
+        {{ end }}
+
+    </nav>
+</body>
+
 </html>

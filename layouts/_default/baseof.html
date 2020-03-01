@@ -17,17 +17,29 @@
 </head>
 
 <body>
-    {{ block "main" . }}<div class="wrap">
-        {{ block "section_title" . }}<div class="section" id="title">{{ .Title }}</div>{{ end }}
-
-        {{ block "section_content" . }}<div class="section" id="content">{{ .Content }}</div>{{ end }}
-
-        {{ block "bottom-menu" . }}
-        {{ if .Site.Params.mainMenu }}<div class="section bottom-menu">{{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" false) }}</div>{{ end }}
+    {{ block "main" . }}
+    {{ block "section_title" . }}
+    <header class="wrap flex-container">
+        <h1>{{ .Title }}</h1>
+    </header>
+    {{ end }}
+    <main class="wrap">
+        {{ block "section_content" . }}
+        <article role="article" class="flex-container">{{ .Content }}</article>
         {{ end }}
 
-        {{ block "footer" . }}<div class="section footer">{{ partial "footer.html" . }}</div>{{ end }}
-    </div>{{ end }}
+        {{ block "bottom-menu" . }}
+        {{ if .Site.Params.mainMenu }}
+        <nav role="navigation" class="flex-container bottom-menu">
+            {{ partial "bottom_menu.html" (dict "Page" . "show_back_menu_item" false) }}
+        </nav>
+        {{ end }}
+        {{ end }}
+    </main>
+    {{ block "footer" . }}
+    <footer class="flex-container footer">{{ partial "footer.html" . }}</footer>
+    {{ end }}
+    {{ end }}
 </body>
 
 </html>

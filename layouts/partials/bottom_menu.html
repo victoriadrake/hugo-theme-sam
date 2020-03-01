@@ -22,7 +22,7 @@
         {{ end }}
     {{ end }}
     &#183; 
-    <a href="{{.Page.Site.BaseURL}}">
+    <a href="{{ .Site.Home | relURL }}">
         {{ .Page.Site.Params.homepage }}
     </a>
 {{ end }}

@@ -1,7 +1,7 @@
 {{ define "section_content" }}
-<div class="section" id="content">
+<article role="article" class="flex-container">
     {{ .Content }}
-</div>
+</article>
 
 {{ if .Params.clickablePhotos }}
     <div class="grid">

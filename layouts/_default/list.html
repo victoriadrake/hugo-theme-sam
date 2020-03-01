@@ -1,13 +1,13 @@
 {{ define "section_content" }}
-<div class="section" id="content">
+<article class="flex-container">
     {{ .Content }}
+</article>
+<nav role="navigation">
     <ul>
         {{ range .Data.Pages }}
         <li>
             {{ if .Params.showDate }}
-
             {{ .Date.Format (.Site.Params.dateForm | default "Mon Jan 02, 2006")}} --
-
             {{ end }}
             <a href="{{.RelPermalink}}">
                 {{.Title}}
@@ -15,5 +15,5 @@
         </li>
         {{ end }}
     </ul>
-</div>
+</nav>
 {{ end }}

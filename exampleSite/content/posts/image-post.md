@@ -11,7 +11,7 @@ Hello! I'm a blog post with an image. Thanks to Open Graph and Twitter metadata,
 
 ![Ideas](/posts/ideas.png)
 
-To make this happen, set the `images` parameter in your post's [front-matter](https://gohugo.io/content-management/front-matter/), like this:
+To make this happen, set the `images` parameter in your post's [front-matter](https://gohugo.io/content-management/front-matter/), like this YAML example:
 
 ```yaml
 images:

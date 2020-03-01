@@ -4,9 +4,11 @@
 <meta name="MobileOptimized" content="320">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer">
-{{ if .Site.Params.description }}<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
+{{ if .Site.Params.description }}
+<meta name="description" content="{{ .Site.Params.description }}">{{ end }}
 <title>
-{{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}
+    {{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}
 </title>
 <!-- RSS -->
-{{ with .OutputFormats.Get "RSS" }}<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />{{ end }}
+{{ with .OutputFormats.Get "RSS" }}
+<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />{{ end }}
