@@ -24,6 +24,7 @@ Focused on content and typography, the stylized index page is really just a list
   - Syntax highlighting
   - Share-ready pages with [Open Graph](https://gohugo.io/templates/internal/#open-graph) and [Twitter](https://gohugo.io/templates/internal/#twitter-cards) metadata you can customize in `config.toml` and page front-matter
   - Effortless use of Hugo Pipes to generate CSS from Sass files
+  - Tested for compatibility with Hugo versions as far back as `0.49.2`
 
 ## Quick start
 
@@ -146,7 +147,7 @@ clickablePhotos: true
 
 In order to create more than one gallery, create multiple Page Bundles with images and `type: "gallery"` defined in the `_index.md` front matter. For example:
 
-```
+```text
 content/
  ├── gallery/
  |   ├── _index.md
