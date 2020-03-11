@@ -28,7 +28,7 @@ env:
 install:
   - wget -q https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
   - tar xf hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
-  - npm install autoprefixer postcss-cli
+  - npm install -g autoprefixer postcss-cli
   - mv hugo ~/bin/
   - gem install html-proofer
 
