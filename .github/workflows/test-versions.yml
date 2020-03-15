@@ -1,4 +1,4 @@
-name: Test Hugo versions
+name: test-versions
 
 on:
   push:
