@@ -1,6 +1,5 @@
-# [Call me Sam: a theme for Hugo](https://hugo-sam.netlify.com/)
+# [Call me Sam: a theme for Hugo](https://victoria.dev/hugo-theme-sam/)
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b069f23f-06c5-4af6-b1aa-6304d986f9b0/deploy-status)](https://app.netlify.com/sites/hugo-sam/deploys)
 ![Test Hugo versions](https://github.com/victoriadrake/hugo-theme-introduction/workflows/test-versions/badge.svg)
 ![Latest Release](https://img.shields.io/github/tag/victoriadrake/hugo-theme-sam.svg)
 
@@ -32,7 +31,13 @@ Focused on content and typography, the stylized index page is really just a list
 
 - Extended version of [Hugo](https://gohugo.io/getting-started/installing/) (latest version recommended)
 
-Extended Hugo's [PostCSS](https://gohugo.io/hugo-pipes/postcss/) requires JavaScript packages to compile the styles for this theme. You can install them using `npm`:
+Extended Hugo's [PostCSS](https://gohugo.io/hugo-pipes/postcss/) requires JavaScript packages to compile the styles for this theme. If you're seeing an error like this:
+
+```text
+Error: Error building site: POSTCSS failed to transform "css/main.css"
+```
+
+You can install the required packages using `npm`:
 
 - [postcss-cli](https://github.com/postcss/postcss-cli):`npm install -g postcss-cli`
 - [autoprefixer](https://github.com/postcss/autoprefixer): `npm install -g autoprefixer`

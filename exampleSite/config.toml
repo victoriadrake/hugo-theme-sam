@@ -21,19 +21,19 @@ pygmentsCodefences       = true
     title                = "Call me Sam"
 
 [[params.mainMenu]]
-    link = "/posts"
+    link = "posts"
     text = "posts"
 
 [[params.mainMenu]]
-    link = "/gallery"
+    link = "gallery"
     text = "gallery"
 
 [[params.mainMenu]]
-    link = "/portfolio"
+    link = "portfolio"
     text = "portfolio"
 
 [[params.mainMenu]]
-    link = "/about"
+    link = "about"
     text = "who is sam?"
 
 [imaging]
