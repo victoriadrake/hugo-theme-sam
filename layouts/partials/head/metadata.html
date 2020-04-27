@@ -10,5 +10,10 @@
     {{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}
 </title>
 <!-- RSS -->
-{{ with .OutputFormats.Get "RSS" }}
-<link href="{{ .RelPermalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />{{ end }}
+{{- with .OutputFormats.Get "RSS" -}}
+{{ $rss := .RelPermalink }}
+{{- if $.Site.Params.rss -}}
+{{ $rss = $.Site.Params.rss }}
+{{- end -}}
+<link href="{{ $rss }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+{{- end -}}

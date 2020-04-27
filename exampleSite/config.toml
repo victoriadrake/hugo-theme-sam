@@ -19,6 +19,7 @@ pygmentsCodefences       = true
     description          = "A new Hugo site."               # Max 160 characters show in search results
     images               = ["tn.png"]                       # Image that shows on Twitter cards and Open Graph links to the site
     title                = "Call me Sam"
+    # rss                = ""
 
 [[params.mainMenu]]
     link = "posts"
