@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Long Form Post</title>
+      <title>_Long_ Form Post</title>
       <link>https://victoria.dev/hugo-theme-sam/posts/long-form-post/</link>
       <pubDate>Thu, 08 Mar 2018 20:18:53 -0500</pubDate>
       
@@ -21,7 +21,7 @@
     </item>
     
     <item>
-      <title>Code Poetry</title>
+      <title>`Code` Poetry</title>
       <link>https://victoria.dev/hugo-theme-sam/posts/code-poetry/</link>
       <pubDate>Tue, 13 Feb 2018 13:56:12 -0500</pubDate>
       

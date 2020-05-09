@@ -21,7 +21,7 @@
     </item>
     
     <item>
-      <title>Long Form Post</title>
+      <title>_Long_ Form Post</title>
       <link>https://victoria.dev/hugo-theme-sam/posts/long-form-post/</link>
       <pubDate>Thu, 08 Mar 2018 20:18:53 -0500</pubDate>
       
@@ -30,7 +30,7 @@
     </item>
     
     <item>
-      <title>Image post</title>
+      <title>**Image** post</title>
       <link>https://victoria.dev/hugo-theme-sam/posts/image-post/</link>
       <pubDate>Mon, 19 Feb 2018 12:41:46 -0500</pubDate>
       
