@@ -7,7 +7,7 @@
 {{ if .Site.Params.description }}
 <meta name="description" content="{{ .Site.Params.description }}">{{ end }}
 <title>
-    {{ .Title }}{{ if ne .Title .Site.Title }} - {{ .Site.Title }}{{ end }}
+    {{ .Title | markdownify }}{{ if ne .Title .Site.Title }} - {{ .Site.Title | markdownify }}{{ end }}
 </title>
 <!-- RSS -->
 {{- with .OutputFormats.Get "RSS" -}}

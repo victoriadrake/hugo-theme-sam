@@ -39,8 +39,7 @@ ul {
   list-style-type: none; }
 
 p {
-  display: inline;
-  opacity: 0.8; }
+  display: inline; }
 
 a {
   color: #cccccc;
@@ -158,8 +157,7 @@ article {
     display: block;
     margin-bottom: 1em;
     line-height: 1.6;
-    letter-spacing: 1.5px;
-    opacity: 0.8; }
+    letter-spacing: 1.5px; }
   article .highlight {
     width: 100%; }
   article pre {

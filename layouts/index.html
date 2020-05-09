@@ -3,7 +3,7 @@
 
 <head>
     {{ partial "head.html" . }}
-    <title>{{ .Title }}</title>
+    <title>{{ .Title | markdownify }}</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
         {{ else }}
         {{ range .Site.Sections }}
             <a href="{{.RelPermalink}}" class="big-link">
-                {{.Title}}
+                {{.Title | markdownify}}
             </a>
         {{ end }}
         {{ end }}
