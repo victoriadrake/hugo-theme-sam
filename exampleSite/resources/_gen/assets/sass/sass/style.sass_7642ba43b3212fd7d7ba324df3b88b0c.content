@@ -20,10 +20,12 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  opacity: 1;
-  padding: 6em 1em; }
+  opacity: 1; }
+
+header {
+  padding: 6em 1em 1em 0; }
   @media screen and (max-width: 736px) {
-    body {
+    header {
       padding: 3em 1em; } }
 h1, h2, h3 {
   margin-bottom: 0.5em;
@@ -121,13 +123,8 @@ nav {
     display: contents; }
 
 #splash {
-  margin: auto 0;
-  height: 100vh;
-  width: 45%;
-  overflow: hidden; }
-  @media screen and (max-width: 736px) {
-    #splash {
-      width: 90%; } }
+  min-height: calc(100vh - 6em); }
+
 .big-link {
   font-family: "Didact Gothic", "sans serif";
   font-size: 3rem;
