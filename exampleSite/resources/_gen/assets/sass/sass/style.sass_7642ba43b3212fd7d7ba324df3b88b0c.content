@@ -26,7 +26,7 @@ header {
   padding: 6em 1em 1em 0; }
   @media screen and (max-width: 736px) {
     header {
-      padding: 3em 1em; } }
+      padding: 3em 0; } }
 h1, h2, h3 {
   margin-bottom: 0.5em;
   font-family: 'Didact Gothic', sans-serif;
@@ -79,7 +79,7 @@ nav {
   max-width: 64em; }
   @media screen and (max-width: 736px) {
     .wrap {
-      width: 100%; } }
+      width: 90%; } }
 .tag-container {
   display: flex;
   flex-direction: row;
