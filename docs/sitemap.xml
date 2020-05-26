@@ -8,6 +8,11 @@
   </url>
   
   <url>
+    <loc>https://victoria.dev/hugo-theme-sam/</loc>
+    <lastmod>2018-03-16T20:18:53-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://victoria.dev/hugo-theme-sam/tags/</loc>
     <lastmod>2018-03-16T20:18:53-05:00</lastmod>
   </url>
@@ -49,11 +54,6 @@
   
   <url>
     <loc>https://victoria.dev/hugo-theme-sam/about/</loc>
-    <lastmod>2018-02-13T13:42:49-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://victoria.dev/hugo-theme-sam/</loc>
     <lastmod>2018-02-13T13:42:49-05:00</lastmod>
   </url>
   
