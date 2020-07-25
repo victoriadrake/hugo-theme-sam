@@ -175,6 +175,9 @@ This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/) to comp
 
 To make changes to the CSS, edit the Sass files located in `assets/sass/`, then build your site using extended Hugo, which you can obtain from [Hugo Releases](https://github.com/gohugoio/hugo/releases).
 
+If when building you do not see the changes you have done, make sure to build your website with the `--ignoreCache` flag, otherwise Hugo will
+attempt to use its own cached Sass files.
+
 You can run the built-in server to preview the site as you make changes to the Sass files!
 
 ## Contributing
