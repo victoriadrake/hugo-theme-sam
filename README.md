@@ -1,5 +1,6 @@
 # [Call me Sam: a theme for Hugo](https://victoria.dev/hugo-theme-sam/)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5eea4600-5396-4e6a-be45-484435e875d9/deploy-status)](https://app.netlify.com/sites/hugo-theme-sam/deploys)
 ![Test Hugo versions](https://github.com/victoriadrake/hugo-theme-introduction/workflows/test-versions/badge.svg)
 ![Latest Release](https://img.shields.io/github/tag/victoriadrake/hugo-theme-sam.svg)
 

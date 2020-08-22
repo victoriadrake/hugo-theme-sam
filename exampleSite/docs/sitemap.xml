@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://example.com/tags/blog/</loc>
+    <lastmod>2018-03-16T20:18:53-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/</loc>
+    <lastmod>2018-03-16T20:18:53-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/</loc>
+    <lastmod>2018-03-16T20:18:53-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/video-post/</loc>
+    <lastmod>2018-03-16T20:18:53-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/long-form-post/</loc>
+    <lastmod>2018-03-08T20:18:53-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/code/</loc>
+    <lastmod>2018-03-08T20:18:53-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/image-post/</loc>
+    <lastmod>2018-02-19T12:41:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/story/</loc>
+    <lastmod>2018-02-19T12:41:46-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/code-poetry/</loc>
+    <lastmod>2018-02-13T13:56:12-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/poem/</loc>
+    <lastmod>2018-02-13T13:56:12-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/about/</loc>
+    <lastmod>2018-02-13T13:42:49-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/</loc>
+    <lastmod>2018-02-13T12:21:57-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/classic/</loc>
+    <lastmod>2018-02-11T12:34:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/dear-jane/</loc>
+    <lastmod>2018-02-11T12:34:41-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/oh-alice/</loc>
+    <lastmod>2018-02-09T12:32:12-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/posts/a-poem/</loc>
+    <lastmod>2018-02-01T12:35:11-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://example.com/gallery/</loc>
+  </url>
+  
+  <url>
+    <loc>https://example.com/portfolio/</loc>
+  </url>
+  
+</urlset>
