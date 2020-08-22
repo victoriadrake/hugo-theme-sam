@@ -110,7 +110,7 @@ article
     display: grid
     grid-gap: 20px
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
-    grid-auto-rows: auto
+    place-items: start
     @media screen and (max-width: 736px)
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr))
 
@@ -123,6 +123,9 @@ article
     width: 100%
     object-fit: cover
     opacity: 1
+
+.grid > div > a
+    border-bottom: none
 
 .grid > div > a > img
     height: 100%
