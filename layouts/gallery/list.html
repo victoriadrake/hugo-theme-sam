@@ -4,7 +4,7 @@
 </article>
 
 {{ if .Params.clickablePhotos }}
-    <div class="grid">
+    <div class="grid {{ cond .Params.keepAspectRatio "keep-aspect-ratio" ""}}">
     {{ $images := .Resources.ByType "image" }}
     {{ range $index, $element := shuffle $images }}
         {{ $resized := $element.Resize $.Params.maxWidth }}

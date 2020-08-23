@@ -137,6 +137,7 @@ To automagically generate a gallery from the images, set `type: "gallery"` in th
 - The page link with `url`
 - The `maxWidth` of the resized images
 - Whether you want the images to link to the full size files, with `clickablePhotos`
+- You can keep the orignal aspect ratio of the images in the grid with `keepAspectRatio`
 
 Here is an example of a gallery's `_index.md`:
 
@@ -147,6 +148,7 @@ type: "gallery"
 url: "/portrait-gallery"
 maxWidth: "800x"
 clickablePhotos: true
+keepAspectRatio: false
 ---
 ```
 

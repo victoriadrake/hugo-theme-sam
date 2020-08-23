@@ -110,9 +110,13 @@ article
     display: grid
     grid-gap: 20px
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
-    place-items: start
+    grid-auto-rows: 400px
     @media screen and (max-width: 736px)
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr))
+
+    &.keep-aspect-ratio
+        grid-auto-rows: auto
+        place-items: start
 
 .grid > div
     background-color: transparent

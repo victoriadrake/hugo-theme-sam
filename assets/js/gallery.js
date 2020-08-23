@@ -27,9 +27,10 @@ const Gallery = (selector) => {
       return { x: rect.left, y: rect.top + offset, w: rect.width };
     };
 
+    const keepAspectRatio = grid.classList.contains("keep-aspect-ratio");
     const options = {
-      getThumbBoundsFn,
       index,
+      getThumbBoundsFn: keepAspectRatio ? getThumbBoundsFn : undefined,
     };
 
     gallery = new PhotoSwipe(pswp, PhotoSwipeUI_Default, items, options);
