@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>poem on Call me Sam</title>
+    <link>https://example.com/tags/poem/</link>
+    <description>Recent content in poem on Call me Sam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Feb 2018 13:56:12 -0500</lastBuildDate>
+    
+	<atom:link href="https://example.com/tags/poem/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>`Code` Poetry</title>
+      <link>https://example.com/posts/code-poetry/</link>
+      <pubDate>Tue, 13 Feb 2018 13:56:12 -0500</pubDate>
+      
+      <guid>https://example.com/posts/code-poetry/</guid>
+      <description>Pseudo code poem.
+if (this === that): try write_new_poem() except not_a_poet as e: return e e cummings?
+console.log(&amp;#39;eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&amp;#39;) An embedded gist using shortcode:
+ </description>
+    </item>
+    
+    <item>
+      <title>A Poem</title>
+      <link>https://example.com/posts/a-poem/</link>
+      <pubDate>Thu, 01 Feb 2018 12:35:11 -0500</pubDate>
+      
+      <guid>https://example.com/posts/a-poem/</guid>
+      <description>Now pleasing sleep had seal&amp;rsquo;d each mortal eye,
+Stretch&amp;rsquo;d in the tents the Grecian leaders lie:
+The immortals slumber&amp;rsquo;d on their thrones above;
+All, but the ever-wakeful eyes of Jove.(76)
+To honour Thetis&amp;rsquo; son he bends his care,
+And plunge the Greeks in all the woes of war:
+Then bids an empty phantom rise to sight,
+And thus commands the vision of the night.
+&amp;ldquo;Fly hence, deluding Dream! and light as air,(77)</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Call me Sam</title>
+    <link>https://example.com/posts/</link>
+    <description>Recent content in Posts on Call me Sam</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 13 Feb 2018 12:21:57 -0500</lastBuildDate>
+    
+	<atom:link href="https://example.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Video post</title>
+      <link>https://example.com/posts/video-post/</link>
+      <pubDate>Fri, 16 Mar 2018 20:18:53 -0500</pubDate>
+      
+      <guid>https://example.com/posts/video-post/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus eget nunc scelerisque viverra. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Pharetra magna ac placerat vestibulum lectus mauris. Eget lorem dolor sed viverra ipsum. Elementum nisi quis eleifend quam adipiscing. Aliquet nec ullamcorper sit amet risus. Auctor neque vitae tempus quam pellentesque. Tincidunt lobortis feugiat vivamus at augue.</description>
+    </item>
+    
+    <item>
+      <title>_Long_ Form Post</title>
+      <link>https://example.com/posts/long-form-post/</link>
+      <pubDate>Thu, 08 Mar 2018 20:18:53 -0500</pubDate>
+      
+      <guid>https://example.com/posts/long-form-post/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus eget nunc scelerisque viverra. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Pharetra magna ac placerat vestibulum lectus mauris. Eget lorem dolor sed viverra ipsum. Elementum nisi quis eleifend quam adipiscing. Aliquet nec ullamcorper sit amet risus. Auctor neque vitae tempus quam pellentesque. Tincidunt lobortis feugiat vivamus at augue.</description>
+    </item>
+    
+    <item>
+      <title>**Image** post</title>
+      <link>https://example.com/posts/image-post/</link>
+      <pubDate>Mon, 19 Feb 2018 12:41:46 -0500</pubDate>
+      
+      <guid>https://example.com/posts/image-post/</guid>
+      <description>Hello! I&amp;rsquo;m a blog post with an image. Thanks to Open Graph and Twitter metadata, external links to this page will feature the image below.
+To make this happen, set the images parameter in your post&amp;rsquo;s front-matter, like this YAML example:
+images: - /posts/ideas.png </description>
+    </item>
+    
+    <item>
+      <title>`Code` Poetry</title>
+      <link>https://example.com/posts/code-poetry/</link>
+      <pubDate>Tue, 13 Feb 2018 13:56:12 -0500</pubDate>
+      
+      <guid>https://example.com/posts/code-poetry/</guid>
+      <description>Pseudo code poem.
+if (this === that): try write_new_poem() except not_a_poet as e: return e e cummings?
+console.log(&amp;#39;eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&amp;#39;) An embedded gist using shortcode:
+ </description>
+    </item>
+    
+    <item>
+      <title>Dear Jane, regarding Mr. Bennet</title>
+      <link>https://example.com/posts/dear-jane/</link>
+      <pubDate>Sun, 11 Feb 2018 12:34:41 -0500</pubDate>
+      
+      <guid>https://example.com/posts/dear-jane/</guid>
+      <description>Chapter One It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.
+However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of their daughters.</description>
+    </item>
+    
+    <item>
+      <title>Oh, Alice</title>
+      <link>https://example.com/posts/oh-alice/</link>
+      <pubDate>Fri, 09 Feb 2018 12:32:12 -0500</pubDate>
+      
+      <guid>https://example.com/posts/oh-alice/</guid>
+      <description>Nor did such soothing scenes, however temporary, fail of at least as temporary an effect on Ahab. But if these secret golden keys did seem to open in him his own secret golden treasuries, yet did his breath upon them prove but tarnishing. Alice opened the door and found that it led into a small passage, not much larger than a rat-hole: she knelt down and looked along the passage into the loveliest garden you ever saw.</description>
+    </item>
+    
+    <item>
+      <title>A Poem</title>
+      <link>https://example.com/posts/a-poem/</link>
+      <pubDate>Thu, 01 Feb 2018 12:35:11 -0500</pubDate>
+      
+      <guid>https://example.com/posts/a-poem/</guid>
+      <description>Now pleasing sleep had seal&amp;rsquo;d each mortal eye,
+Stretch&amp;rsquo;d in the tents the Grecian leaders lie:
+The immortals slumber&amp;rsquo;d on their thrones above;
+All, but the ever-wakeful eyes of Jove.(76)
+To honour Thetis&amp;rsquo; son he bends his care,
+And plunge the Greeks in all the woes of war:
+Then bids an empty phantom rise to sight,
+And thus commands the vision of the night.
+&amp;ldquo;Fly hence, deluding Dream! and light as air,(77)</description>
+    </item>
+    
+  </channel>
+</rss>
