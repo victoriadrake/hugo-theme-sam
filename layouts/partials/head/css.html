@@ -16,3 +16,9 @@
 {{ $style := resources.Get . }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" media="screen">
 {{- end }}
+
+<!-- PhotoSwipe -->
+{{ $photoswipe := "css/photoswipe.css" }}
+<link rel="stylesheet" href="{{ $photoswipe | absURL }}">
+{{ $defaultSkin := "css/default-skin.css" }}
+<link rel="stylesheet" href="{{ $defaultSkin | absURL }}">
