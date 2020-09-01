@@ -20,6 +20,7 @@ Focused on content and typography, the stylized index page is really just a list
 - Customize
   - Custom navigation menu set via `config.toml`
   - Custom footer text
+  - Custom background video via `config.toml`
 - Developer-approved
   - Syntax highlighting
   - Share-ready pages with [Open Graph](https://gohugo.io/templates/internal/#open-graph) and [Twitter](https://gohugo.io/templates/internal/#twitter-cards) metadata you can customize in `config.toml` and page front-matter
@@ -171,6 +172,23 @@ content/
 ```
 
 That's it! Sam's gallery layout template will automagically build the page from your images.
+
+## Custom video background
+
+To change the default home page background to a looping video, you need to set a list of video sources and optionally an overlay color (default: `rgba(0, 0, 0, 0.4)`).
+
+Here is an example configuration of `config.toml`:
+
+```toml
+[[params.videoBackgroud.sources]]
+    source  = "/background.mp4"
+    type    = "video/mp4"
+    poster  = "/background.jpg"
+
+[params.videoBackgroud]
+    overlay = "rgba(0, 0, 0, 0.4)" # optional
+
+```
 
 ## Editing the theme
 
