@@ -136,3 +136,26 @@ article
     width: 100%
     object-fit: cover
     opacity: 1
+
+.video
+    position: fixed
+    z-index: -1
+
+#overlay
+    position: fixed
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    background: rgba(0,0,0, 0.4)
+    z-index: -1
+
+@media (min-aspect-ratio: 16/9)
+    .video
+        width: 100%
+        height: auto
+
+@media (max-aspect-ratio: 16/9)
+    .video
+        width: auto
+        height: 100%

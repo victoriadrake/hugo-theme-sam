@@ -7,6 +7,20 @@
 </head>
 
 <body>
+    {{ with .Site.Params.videoBackgroud }}
+        <video class="video" autoplay muted preload loop playsinline>
+            {{ range .sources }}
+                <source
+                    src="{{ .source }}"
+                    type="{{ .type }}"
+                    poster="{{ .poster }}" />
+            {{ end }}
+        </video>
+        {{ with .overlay }}
+            <div id="overlay" style="background: {{ . | safeCSS }};"></div>
+        {{ end }}
+    {{ end }}
+
     <nav role="navigation" class="flex-container" id="splash">
 
         {{ if .Site.Params.mainMenu }}
