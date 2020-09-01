@@ -54,14 +54,6 @@ a {
   a:active {
     color: #cccccc; }
 
-button {
-  padding: 20px;
-  border: 0px;
-  border-radius: 5px;
-  background: #fff; }
-  button:hover {
-    box-shadow: 5px 5px #111; }
-
 hr {
   margin: 1rem 0;
   background-color: transparent;
@@ -234,10 +226,14 @@ article {
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-auto-rows: auto; }
+  grid-auto-rows: 400px; }
   @media screen and (max-width: 736px) {
     .grid {
       grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); } }
+  .grid.keep-aspect-ratio {
+    grid-auto-rows: auto;
+    place-items: start; }
+
 .grid > div {
   background-color: transparent;
   overflow: hidden; }
@@ -248,11 +244,37 @@ article {
   object-fit: cover;
   opacity: 1; }
 
+.grid > div > a {
+  border-bottom: none; }
+
 .grid > div > a > img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   opacity: 1; }
+
+.video {
+  position: fixed;
+  z-index: -1; }
+
+#overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1; }
+
+@media (min-aspect-ratio: 16/9) {
+  .video {
+    width: 100%;
+    height: auto; } }
+
+@media (max-aspect-ratio: 16/9) {
+  .video {
+    width: auto;
+    height: 100%; } }
 
 .go-left {
   justify-content: flex-start;
