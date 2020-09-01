@@ -181,14 +181,18 @@ Here is an example configuration of `config.toml`:
 
 ```toml
 [[params.videoBackgroud.sources]]
-    source  = "/background.mp4"
+    source  = "/background.mp4" # Your video file
     type    = "video/mp4"
-    poster  = "/background.jpg"
+    poster  = "/background.jpg" # The image to show when the video isn't playing
 
 [params.videoBackgroud]
     overlay = "rgba(0, 0, 0, 0.4)" # optional
 
 ```
+
+And here is a screenshot of what that might look like:
+
+![Video background main page screenshot](https://github.com/victoriadrake/hugo-theme-sam/blob/master/images/video_screenshot.png)
 
 ## Editing the theme
 
