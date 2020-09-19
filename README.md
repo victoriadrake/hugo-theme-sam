@@ -44,7 +44,7 @@ You can install the required packages using `npm`:
 - [postcss-cli](https://github.com/postcss/postcss-cli):`npm install -g postcss-cli`
 - [autoprefixer](https://github.com/postcss/autoprefixer): `npm install -g autoprefixer`
 
-[Learn how to install and use npm here](https://www.npmjs.com/get-npm).
+If you're new to Node.js and npm, [learn how to install and use npm here](https://www.npmjs.com/get-npm). It is recommended that you use a version manager for your Node.js installation, such as [`nvm`](https://github.com/nvm-sh/nvm).
 
 Note: If you are using [Hugo as a snap app](https://snapcraft.io/hugo), the above two Node.js packages have to be [installed locally inside `exampleSite`](https://gohugo.io/hugo-pipes/postcss/).
 
@@ -180,12 +180,12 @@ To change the default home page background to a looping video, you need to set a
 Here is an example configuration of `config.toml`:
 
 ```toml
-[[params.videoBackgroud.sources]]
+[[params.videoBackground.sources]]
     source  = "/background.mp4" # Your video file
     type    = "video/mp4"
     poster  = "/background.jpg" # The image to show when the video isn't playing
 
-[params.videoBackgroud]
+[params.videoBackground]
     overlay = "rgba(0, 0, 0, 0.4)" # optional
 
 ```
@@ -205,9 +205,13 @@ attempt to use its own cached Sass files.
 
 You can run the built-in server to preview the site as you make changes to the Sass files!
 
+## Issues
+
+If you have a question or get stuck, please [open an issue](https://github.com/victoriadrake/hugo-theme-introduction/issues) for help and to help those who come after you. The more information you can provide, the better!
+
 ## Contributing
 
-Pull requests for bug fixes and enhancements are welcome.
+Pull requests for bug fixes and enhancements are welcome! Please ensure you first read about [contributing](CONTRIBUTING.md) to this project.
 
 Open source themes like this one would not be possible without some amazing __[contributors](https://github.com/victoriadrake/hugo-theme-sam/graphs/contributors)__. Thank you!
 

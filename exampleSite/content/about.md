@@ -7,7 +7,9 @@ Hello, I'm Sam. I'm a theme for [Hugo](https://gohugo.io/). I'm an extremely cus
 
 I have slick minimalist templates for list pages (such as a list of blog posts) and single pages (a page to read one blog post). You can use tags on your content, and view content by tags.
 
-I also have a simple responsive gallery built with CSS grid. It'll look great on any screen, and all you have to do is provide a folder of images.
+I also have a simple responsive gallery feature. It'll look great on any screen, and all you have to do is provide a folder of images.
+
+If you want to get really fancy, you can add an option video background to my main page.
 
 I'm built and maintained by [Victoria Drake](https://victoria.dev) and a lovely team of [contributors](https://github.com/victoriadrake/hugo-theme-sam/graphs/contributors).
 

@@ -21,11 +21,11 @@ pygmentsCodefences       = true
     title                = "Call me Sam"
     # rss                = ""
 
-[[params.videoBackgroud.sources]]
+[[params.videoBackground.sources]]
     source  = "/sample_video.mp4"
     type    = "video/mp4"
     poster  = "/background.png"
-[params.videoBackgroud]
+[params.videoBackground]
     overlay = "rgba(0, 0, 0, 0.4)" # optional
 
 [[params.mainMenu]]
