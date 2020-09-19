@@ -29,6 +29,24 @@ Focused on content and typography, the stylized index page is really just a list
 
 ## Quick start
 
+Table of Contents
+=================
+* [Requirements](#requirements)
+* [Troubleshooting for installing postcss-cli and autoprefixer](#troubleshooting-for-installing-postcss-cli-and-autoprefixer)
+* [1. Get the theme](#1-get-the-theme)
+    * [2. Configure your site](#2-configure-your-site)
+    * [3. Create pages](#3-create-pages)
+    * [4. Design your main menu and index page](#4-design-your-main-menu-and-index-page)
+* [Preview your site locally](#preview-your-site-locally)
+* [Troubleshooting for local preview](#troubleshooting-for-local-preview)
+* [Posts](#posts)
+* [Image gallery](#image-gallery)
+* [Custom video background](#custom-video-background)
+* [Editing the theme](#editing-the-theme)
+* [Deploy through Netlify](#deploy-through-netlify)
+* [Contributing](#contributing)
+* [License](#license)
+
 ## Requirements
 
 - Extended version of [Hugo](https://gohugo.io/getting-started/installing/) (latest version recommended)
@@ -52,6 +70,45 @@ Note: If you are using [Hugo as a snap app](https://snapcraft.io/hugo), the abov
 cd exampleSite/
 npm install postcss-cli
 npm install autoprefixer
+```
+## Troubleshooting for installing `postcss-cli` and `autoprefixer`
+
+When installing `postcss-cli` and `autoprefixer`, you might encounter this permission error:
+
+```bash
+Error: EACCES: permission denied, access '/usr/local/lib/node_modules'
+```
+
+[This thread](https://stackoverflow.com/questions/48910876/error-eacces-permission-denied-access-usr-local-lib-node-modules) documented this problem. To solve it, simply follow [this answer](https://stackoverflow.com/a/59575266) by [Adam](https://stackoverflow.com/users/2311074/adam). 
+
+The idea is, instead of installing `npm` through a Node installer, you can install it through `nvm`. 
+
+1. Install `nvm`.
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+```
+
+You can run the above line of code no matter what directory you are at. 
+
+2. Install `Node.js` and `npm` via `nvm`.
+
+```bash
+nvm install stable
+```
+
+Then, you can install `postcss-cli` and `autoprefixer`. 
+
+The following codes come from [this answer](https://github.com/victoriadrake/hugo-theme-introduction/issues/210#issuecomment-645661326) by [gray419](https://github.com/gray419) in [this thread](https://github.com/victoriadrake/hugo-theme-introduction/issues/210). Be sure run the codes at the root directory of your Hugo project. 
+
+```bash 
+sudo npm i -g postcss-cli
+```
+
+and
+
+```bash
+sudo npm i -g autoprefixer 
 ```
 
 ## 1. Get the theme
@@ -111,6 +168,16 @@ hugo serve -t sam
 ```
 
 Visit `localhost:1313` in your browser to see a live preview of your site.
+
+## Troubleshooting for local preview
+
+When previewing the website, Hugo might give you this error:
+
+```bash
+TOCSS: failed to transform "css/main.tmp.css" (text/x-sass): resource "sass/sass/style.sass_7642ba43b3212fd7d7ba324df3b88b0c" not found in file cache
+```
+
+To solve this problem, simply copy the `/exampleSite/resources` and paste it into the root directory of your hugo project. 
 
 ## Posts
 
@@ -204,6 +271,33 @@ If when building you do not see the changes you have done, make sure to build yo
 attempt to use its own cached Sass files.
 
 You can run the built-in server to preview the site as you make changes to the Sass files!
+
+## Deploy through Netlify
+
+If you are deploying your project via Netlify:
+
+First, don't use`hugo-theme-sam/netlify.toml`. Instead, you should use the `netlify.toml` [here](https://gohugo.io/hosting-and-deployment/hosting-on-netlify/) provided by Hugo. Be sure to edit the `HUGO_VERSION` accordingly. Put this `netlify.toml` file at the root directory of your Hugo project. 
+
+When you deploy, it might fail and Netlify might give you this error message:
+
+```
+Building sites … ERROR 2020/09/16 20:06:07 Transformation failed: POSTCSS: failed to transform "css/main.css" (text/css): PostCSS not found; install with "npm install postcss-cli". See https://gohugo.io/hugo-pipes/postcss/
+```
+
+This problem can be solved by [this answer](https://github.com/victoriadrake/hugo-theme-introduction/issues/210#issuecomment-651869483) by [mike-foucault](https://github.com/mike-foucault). Simply add a `package.json` file at the root directory of your Hugo project. The `package.json` is to tell Netlify what packages are needed to deploy our Hugo project: `postcss-cli` and `autoprefixer`. Although you have installed the two packages locally, Netlify doesn't know they are needed until you provide this file. 
+
+The `package.json` should be like this:
+
+```json
+{
+  "name": "netlify-deps",
+  "version": "0.1.0",
+  "dependencies": {
+    "postcss-cli": "7.1.1",
+    "autoprefixer": "9.8.4"
+  }
+}
+```
 
 ## Contributing
 
