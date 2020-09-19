@@ -309,8 +309,6 @@ HUGO_VERSION = "0.75.1"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
-
-
 ```
 
 The deployment might fail and Netlify might give you this error message:
