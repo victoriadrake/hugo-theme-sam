@@ -39,10 +39,11 @@ Extended Hugo's [PostCSS](https://gohugo.io/hugo-pipes/postcss/) requires JavaSc
 Error: Error building site: POSTCSS failed to transform "css/main.css"
 ```
 
-You can install the required packages using `npm`:
+You can install the required packages using `npm`. You'll need `postcss`, `postcss-cli`, and `autoprefixer`:
 
-- [postcss-cli](https://github.com/postcss/postcss-cli):`npm install -g postcss-cli`
-- [autoprefixer](https://github.com/postcss/autoprefixer): `npm install -g autoprefixer`
+```sh
+npm i -g postcss postcss-cli autoprefixer
+```
 
 If you're new to Node.js and npm, [learn how to install and use npm here](https://www.npmjs.com/get-npm). It is recommended that you use a version manager for your Node.js installation, such as [`nvm`](https://github.com/nvm-sh/nvm).
 
@@ -50,8 +51,7 @@ Note: If you are using [Hugo as a snap app](https://snapcraft.io/hugo), the abov
 
 ```sh
 cd exampleSite/
-npm install postcss-cli
-npm install autoprefixer
+npm i -g postcss postcss-cli autoprefixer
 ```
 
 ## 1. Get the theme
