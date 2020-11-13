@@ -12,10 +12,18 @@
 {{ end }}
 
 <!-- Custom css -->
-{{ range .Site.Params.customCSS -}}
-{{ $style := resources.Get . }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" media="screen">
-{{- end }}
+{{ if .Site.IsServer }}
+  {{ range .Site.Params.customCSS -}}
+    {{ $style := resources.Get . }}
+      <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous" media="screen">
+  {{- end }}
+{{ else }}
+  {{ range .Site.Params.customCSS -}}
+    {{ $style := resources.Get . }}
+    {{ $bundle := $style | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" crossorigin="anonymous" media="screen">
+  {{- end }}
+{{ end }}
 
 <!-- PhotoSwipe -->
 {{ if eq .Type "gallery" }}
