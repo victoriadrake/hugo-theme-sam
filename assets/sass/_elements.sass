@@ -26,6 +26,13 @@ article
     & h1,h2,h3
         margin: 1em 0em
         text-align: left
+    & .anchor-link > a
+        border-bottom: none
+        color: $body-text
+        &:hover > .pilcrow
+            display: inline
+    & span.pilcrow
+        display: none
     & p
         display: block
         margin-bottom: 1em

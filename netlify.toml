@@ -27,4 +27,4 @@
 # inherit these settings.
 [context.deploy-preview]
   publish = "docs/"
-  command = "hugo --gc --minify -t ../.. -d ../docs -v -b /"
+  command = "echo 'default context'"

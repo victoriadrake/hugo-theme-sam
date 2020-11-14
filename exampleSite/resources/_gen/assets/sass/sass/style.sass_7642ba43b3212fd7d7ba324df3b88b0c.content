@@ -142,6 +142,13 @@ article {
   article h1, article h2, article h3 {
     margin: 1em 0em;
     text-align: left; }
+  article .anchor-link > a {
+    border-bottom: none;
+    color: #fff; }
+    article .anchor-link > a:hover > .pilcrow {
+      display: inline; }
+  article span.pilcrow {
+    display: none; }
   article p {
     display: block;
     margin-bottom: 1em;
