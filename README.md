@@ -31,7 +31,7 @@ Focused on content and typography, the stylized index page is really just a list
 
 ## Requirements
 
-- Extended version of [Hugo](https://gohugo.io/getting-started/installing/) (latest version recommended)
+Requires the **extended** version of Hugo. You can find [installation instructions here](https://gohugo.io/getting-started/installing/) (latest version recommended). Here's a handy [Bash function for downloading a specific Hugo version](https://victoria.dev/blog/how-to-do-twice-as-much-with-half-the-keystrokes-using-.bashrc/#bash-function-for-downloading-extended-hugo).
 
 Extended Hugo's [PostCSS](https://gohugo.io/hugo-pipes/postcss/) requires JavaScript packages to compile the styles for this theme. If you're seeing an error like this:
 
@@ -39,12 +39,10 @@ Extended Hugo's [PostCSS](https://gohugo.io/hugo-pipes/postcss/) requires JavaSc
 Error: Error building site: POSTCSS failed to transform "css/main.css"
 ```
 
-You can install the required packages using `npm`. You'll need `postcss`, `postcss-cli`, and `autoprefixer`.
-
-To temporarily address [this issue](https://github.com/postcss/autoprefixer/issues/1358), please pin `autoprefixer@9.8.6`.
+Install the required packages globally using `npm`. You'll need `postcss`, `postcss-cli`, and `autoprefixer`.
 
 ```sh
-npm i -g postcss postcss-cli autoprefixer@9.8.6
+npm i -g postcss postcss-cli autoprefixer
 ```
 
 If you're new to Node.js and npm, [learn how to install and use npm here](https://www.npmjs.com/get-npm). It is recommended that you use a version manager for your Node.js installation, such as [`nvm`](https://github.com/nvm-sh/nvm).
@@ -53,7 +51,7 @@ Note: If you are using [Hugo as a snap app](https://snapcraft.io/hugo), the abov
 
 ```sh
 cd exampleSite/
-npm i -g postcss postcss-cli autoprefixer
+npm i postcss postcss-cli autoprefixer
 ```
 
 ## 1. Get the theme
@@ -219,6 +217,8 @@ Open source themes like this one would not be possible without some amazing __[c
 
 ## License
 
-Copyright (C) 2018-2020 Victoria Drake
+Copyright (C) 2018-2021 [Victoria Drake](https://victoria.dev/)
 
-Licensed under [Apache-2.0](https://github.com/victoriadrake/hugo-theme-sam/blob/master/LICENSE)
+Licensed under the [Apache License, Version 2.0](https://github.com/victoriadrake/hugo-theme-introduction/blob/master/LICENSE) (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0).
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.

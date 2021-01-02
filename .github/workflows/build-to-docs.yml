@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-node@master
         with:
           node-version: 10.x
-      - run: npm i -g postcss postcss-cli autoprefixer@9.8.6
+      - run: npm i -g postcss postcss-cli autoprefixer
       - name: 🤵 Install Hugo
         run: |
           HUGO_VERSION=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | jq -r '.tag_name')
