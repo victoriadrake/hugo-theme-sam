@@ -21,6 +21,7 @@ Focused on content and typography, the stylized index page is really just a list
   - Custom navigation menu set via `config.toml`
   - Custom footer text
   - Custom background video via `config.toml`
+  - Custom html in head section via `partials/inject/head.html` 
 - Developer-approved
   - Syntax highlighting
   - Share-ready pages with [Open Graph](https://gohugo.io/templates/internal/#open-graph) and [Twitter](https://gohugo.io/templates/internal/#twitter-cards) metadata you can customize in `config.toml` and page front-matter
