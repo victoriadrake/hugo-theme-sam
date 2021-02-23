@@ -12,7 +12,7 @@ pygmentsCodefences       = true
     dateform             = "Mon Jan 02, 2006"
     dateformfull         = "Mon Jan 2 2006 15:04:05 EST"
     favicon              = "sam.ico"
-    homepage             = "main"                           # What to call the home page link
+    homepage             = "main"                           # What to call the home page link, link will not be rendered if empty
     footerText           = "Call me Sam, a theme for Hugo."
 
 # Metadata for Open Graph and Twitter

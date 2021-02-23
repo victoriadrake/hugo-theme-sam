@@ -21,9 +21,12 @@
             <a href="{{ .link | relURL }}">{{ .text }}</a>
         {{ end }}
     {{ end }}
-    &#183; 
-    <a href="{{ .Site.Home | relURL }}">
-        {{ .Page.Site.Params.homepage }}
-    </a>
+    
+    {{ if .Page.Site.Params.homepage }}
+        &#183; 
+        <a href="{{ .Site.Home | relURL }}">
+            {{ .Page.Site.Params.homepage }}
+        </a>
+    {{ end }}
 {{ end }}
 </p>
