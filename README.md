@@ -1,6 +1,6 @@
 # [Call me Sam: a theme for Hugo](https://victoria.dev/hugo-theme-sam/)
 
-![Test Hugo versions](https://github.com/victoriadrake/hugo-theme-introduction/workflows/test-versions/badge.svg)
+![Test Hugo versions](https://github.com/victoriadrake/hugo-theme-sam/workflows/test-versions/badge.svg)
 ![Latest Release](https://img.shields.io/github/tag/victoriadrake/hugo-theme-sam.svg)
 
 ![Main page screenshot](https://github.com/victoriadrake/hugo-theme-sam/blob/master/images/screenshot.png)
@@ -206,7 +206,7 @@ You can run the built-in server to preview the site as you make changes to the S
 
 ## Issues
 
-If you have a question or get stuck, please [open an issue](https://github.com/victoriadrake/hugo-theme-introduction/issues) for help and to help those who come after you. The more information you can provide, the better!
+If you have a question or get stuck, please [open an issue](https://github.com/victoriadrake/hugo-theme-sam/issues) for help and to help those who come after you. The more information you can provide, the better!
 
 ## Contributing
 
@@ -218,6 +218,6 @@ Open source themes like this one would not be possible without some amazing __[c
 
 Copyright (C) 2018-2021 [Victoria Drake](https://victoria.dev/)
 
-Licensed under the [Apache License, Version 2.0](https://github.com/victoriadrake/hugo-theme-introduction/blob/master/LICENSE) (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0).
+Licensed under the [Apache License, Version 2.0](https://github.com/victoriadrake/hugo-theme-sam/blob/master/LICENSE) (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
