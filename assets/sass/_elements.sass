@@ -145,7 +145,12 @@ article
     opacity: 1
 
 .video
+    object-fit: cover
     position: fixed
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
     z-index: -1
 
 #overlay
@@ -159,8 +164,8 @@ article
 
 @media (min-aspect-ratio: 16/9)
     .video
-        width: 100%
-        height: auto
+        width: 100vw
+        height: 100vh
 
 @media (max-aspect-ratio: 16/9)
     .video
