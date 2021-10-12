@@ -76,10 +76,10 @@ From the exampleSite, copy `config.toml` to the root folder of your Hugo site an
 Run:
 
 ```sh
-hugo new page.md
+hugo new content/page.md
 ```
 
-Where `page` can be anything you like. A contact page, a bio, dates for your upcoming world tour... Anything!
+Where `page` can be anything you like. A contact page, a bio, dates for your upcoming world tour... anything!
 
 ### 4. Design your main menu and index page
 
