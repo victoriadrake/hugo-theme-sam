@@ -11,7 +11,7 @@
         {{ $resized := $element.Resize $.Params.maxWidth }}
         <div>
             <a href="{{ $element.RelPermalink }}" data-size="{{ $element.Width }}x{{ $element.Height }}">
-                <img src="{{ $resized.RelPermalink }}" alt="{{ $element.Name }}" data-index="{{ $index }}"/>
+                <img src="{{ $resized.RelPermalink }}" alt="{{ $element.Name }}" data-index="{{ $index }}" data-caption="{{ .Params.caption }}"/>
             </a>
         </div>
     {{ end }}
