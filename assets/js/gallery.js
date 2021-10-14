@@ -4,6 +4,7 @@ const Gallery = (selector) => {
       const link = div.children[0];
       const size = link.getAttribute("data-size").split("x");
       const img = link.children[0];
+      const caption = img.dataset.caption;
 
       return {
         div,
@@ -11,6 +12,7 @@ const Gallery = (selector) => {
         w: parseInt(size[0], 10),
         h: parseInt(size[1], 10),
         msrc: img.getAttribute("src"),
+        title: caption,
       };
     });
   };
