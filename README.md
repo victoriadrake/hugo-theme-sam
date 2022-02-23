@@ -30,6 +30,8 @@ Focused on content and typography, the stylized index page is really just a list
 
 ## Requirements
 
+### General
+
 Requires the **extended** version of Hugo. You can find [installation instructions here](https://gohugo.io/getting-started/installing/) (latest version recommended). Here's a handy [Bash function for downloading a specific Hugo version](https://victoria.dev/blog/how-to-do-twice-as-much-with-half-the-keystrokes-using-.bashrc/#bash-function-for-downloading-extended-hugo).
 
 Extended Hugo's [PostCSS](https://gohugo.io/hugo-pipes/postcss/) requires JavaScript packages to compile the styles for this theme. If you're seeing an error like this:
@@ -53,7 +55,27 @@ cd exampleSite/
 npm i postcss postcss-cli autoprefixer
 ```
 
+### Only when using theme as hugo module:
+
+Go language needs to be installed (version >= 1.12), download Go installer [here](https://go.dev/dl/)
+
 ## 1. Get the theme
+
+### Route 1 (recommended): use theme as hugo module
+
+Turn your new or existing site into a hugo module by issuing this command from site root:
+
+```sh
+hugo mod init github.com/me/my-sam-based-site
+```
+
+- Declare the `sam` theme module as a dependency of your site:
+
+```
+hugo mod get github.com/victoriadrake/hugo-theme-sam
+```
+
+### Route 2 (traditional): install theme locally (git clone or submodule)
 
 Run from the root of your Hugo site:
 
@@ -69,7 +91,24 @@ git submodule add https://github.com/victoriadrake/hugo-theme-sam.git themes/sam
 
 ### 2. Configure your site
 
-From the exampleSite, copy `config.toml` to the root folder of your Hugo site and change the fields as you like. There are helpful hints in the file.
+From the exampleSite, copy `config.toml` to the root folder of your Hugo site. Inside this file, identify the `theme = ...` line.
+
+### Route 1 (hugo module)
+
+Make sure the following line is uncommented in order to activate your theme as hugo module:
+
+```
+theme = "github.com/victoriadrake/hugo-theme-sam"
+```
+### Route 2 (theme cloned locally)
+
+Make sure the following line is uncommented in order to activate your theme as hugo module:
+
+```
+theme = "sam"
+```
+
+Afterwards, adapt the configuration parameters inside `config.toml` as you like. There are helpful hints in the file.
 
 ### 3. Create pages
 
