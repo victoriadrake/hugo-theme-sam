@@ -229,6 +229,18 @@ And here is a screenshot of what that might look like:
 
 ![Video background main page screenshot](https://github.com/victoriadrake/hugo-theme-sam/blob/master/images/video_screenshot.png)
 
+
+## [Add hugo contact form](https://fabform.io/a/hugo-contact-form)
+
+```
+<form action="https://fabform.io/f/{form-id}" method="post">
+ <label for="email">Your Email</label>
+ <input name="email" type="email">
+ <button type="submit">Submit</button> 
+</form>
+```
+
+
 ## Editing the theme
 
 This theme uses [Hugo Pipes](https://gohugo.io/hugo-pipes/introduction/) to compile, autoprefix, and minify its CSS styles from the included Sass files.
