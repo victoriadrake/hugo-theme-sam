@@ -37,8 +37,9 @@ jobs:
           fi
       - name: 🍳 Build site
         run: |
+          git submodule update --init --recursive --remote
           cd exampleSite
-          HUGO_THEME="hugo-theme-sam" hugo --themesDir ../.. -v -d ../docs/ -b https://victoria.dev/hugo-theme-sam
+          HUGO_THEME="hugo-theme-sam" hugo --themesDir ../.. -d ../docs/ -b https://victoria.dev/hugo-theme-sam
       - name: 🚀 Deploy build
         run: |
           git config user.name "${GITHUB_ACTOR}"
