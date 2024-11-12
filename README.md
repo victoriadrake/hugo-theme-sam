@@ -28,6 +28,13 @@ Focused on content and typography, the stylized index page is really just a list
 
 ## Quick start
 
+Preview the theme by cloning this repository and running the example site.
+
+```sh
+git clone https://github.com/victoriadrake/hugo-theme-sam.git themes/sam
+cd exampleSite && HUGO_THEME="hugo-theme-sam" hugo server --themesDir ../.. -v
+```
+
 ## Requirements
 
 Requires the **extended** version of Hugo. You can find [installation instructions here](https://gohugo.io/getting-started/installing/) (latest version recommended). Here's a handy [Bash function for downloading a specific Hugo version](https://victoria.dev/blog/how-to-do-twice-as-much-with-half-the-keystrokes-using-.bashrc/#bash-function-for-downloading-extended-hugo).
@@ -252,7 +259,7 @@ Open source themes like this one would not be possible without some amazing **[c
 
 ## License
 
-Copyright (C) 2018-2022 [Victoria Drake](https://victoria.dev/)
+Copyright (C) 2018-2025 [Victoria Drake](https://victoria.dev/)
 
 Licensed under the [Apache License, Version 2.0](https://github.com/victoriadrake/hugo-theme-sam/blob/master/LICENSE) (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
