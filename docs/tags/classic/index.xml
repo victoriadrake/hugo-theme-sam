@@ -1,47 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>classic on Call me Sam</title>
+    <title>Classic on Call me Sam</title>
     <link>https://victoria.dev/hugo-theme-sam/tags/classic/</link>
-    <description>Recent content in classic on Call me Sam</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Classic on Call me Sam</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Feb 2018 12:34:41 -0500</lastBuildDate><atom:link href="https://victoria.dev/hugo-theme-sam/tags/classic/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Feb 2018 12:34:41 -0500</lastBuildDate>
+    <atom:link href="https://victoria.dev/hugo-theme-sam/tags/classic/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dear Jane, regarding Mr. Bennet</title>
       <link>https://victoria.dev/hugo-theme-sam/posts/dear-jane/</link>
       <pubDate>Sun, 11 Feb 2018 12:34:41 -0500</pubDate>
-      
       <guid>https://victoria.dev/hugo-theme-sam/posts/dear-jane/</guid>
-      <description>Chapter One&amp;nbsp;¶ It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.
-However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of their daughters.</description>
+      <description>&lt;h1 id=&#34;chapter-one&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#chapter-one&#34;&gt;Chapter One&lt;span class=&#34;pilcrow&#34;&gt;&amp;nbsp;¶&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;p&gt;It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.&lt;/p&gt;&#xA;&lt;p&gt;However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of their daughters.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Oh, Alice</title>
       <link>https://victoria.dev/hugo-theme-sam/posts/oh-alice/</link>
       <pubDate>Fri, 09 Feb 2018 12:32:12 -0500</pubDate>
-      
       <guid>https://victoria.dev/hugo-theme-sam/posts/oh-alice/</guid>
-      <description>Nor did such soothing scenes, however temporary, fail of at least as temporary an effect on Ahab. But if these secret golden keys did seem to open in him his own secret golden treasuries, yet did his breath upon them prove but tarnishing. Alice opened the door and found that it led into a small passage, not much larger than a rat-hole: she knelt down and looked along the passage into the loveliest garden you ever saw.</description>
+      <description>&lt;p&gt;Nor did such soothing scenes, however temporary, fail of at least as temporary an effect on Ahab. But if these secret golden keys did seem to open in him his own secret golden treasuries, yet did his breath upon them prove but tarnishing. Alice opened the door and found that it led into a small passage, not much larger than a rat-hole: she knelt down and looked along the passage into the loveliest garden you ever saw. How she longed to get out of that dark hall, and wander about among those beds of bright flowers and those cool fountains, but she could not even get her head through the doorway; &amp;ldquo;and even if my head would go through,&amp;rdquo; thought poor Alice, &amp;ldquo;it would be of very little use without my shoulders. After a time she heard a little pattering of feet. In the distance, and she hastily dried her eyes to see what was coming. It was the White Rabbit returning, splendidly dressed, with a pair of white kid-gloves in one hand and a large fan in the other: he came trotting along in a great hurry, muttering to himself, as he came, &amp;ldquo;Oh! The Duchess, the Duchess! Oh! Won&amp;rsquo;t she be savage if I&amp;rsquo;ve kept her waiting!&amp;rdquo;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>A Poem</title>
       <link>https://victoria.dev/hugo-theme-sam/posts/a-poem/</link>
       <pubDate>Thu, 01 Feb 2018 12:35:11 -0500</pubDate>
-      
       <guid>https://victoria.dev/hugo-theme-sam/posts/a-poem/</guid>
-      <description>Now pleasing sleep had seal&amp;rsquo;d each mortal eye,
-Stretch&amp;rsquo;d in the tents the Grecian leaders lie:
-The immortals slumber&amp;rsquo;d on their thrones above;
-All, but the ever-wakeful eyes of Jove.(76)
-To honour Thetis&#39; son he bends his care,
-And plunge the Greeks in all the woes of war:
-Then bids an empty phantom rise to sight,
-And thus commands the vision of the night.
-&amp;ldquo;Fly hence, deluding Dream! and light as air,(77)</description>
+      <description>&lt;p&gt;Now pleasing sleep had seal&amp;rsquo;d each mortal eye,&lt;br&gt;&#xA;Stretch&amp;rsquo;d in the tents the Grecian leaders lie:&lt;br&gt;&#xA;The immortals slumber&amp;rsquo;d on their thrones above;&lt;br&gt;&#xA;All, but the ever-wakeful eyes of Jove.(76)&lt;br&gt;&#xA;To honour Thetis&amp;rsquo; son he bends his care,&lt;br&gt;&#xA;And plunge the Greeks in all the woes of war:&lt;br&gt;&#xA;Then bids an empty phantom rise to sight,&lt;br&gt;&#xA;And thus commands the vision of the night.&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;Fly hence, deluding Dream! and light as air,(77)&lt;br&gt;&#xA;To Agamemnon&amp;rsquo;s ample tent repair.&lt;br&gt;&#xA;Bid him in arms draw forth the embattled train,&lt;br&gt;&#xA;Lead all his Grecians to the dusty plain.&lt;br&gt;&#xA;Declare, e&amp;rsquo;en now &amp;rsquo;tis given him to destroy&lt;br&gt;&#xA;The lofty towers of wide-extended Troy.&lt;br&gt;&#xA;For now no more the gods with fate contend,&lt;br&gt;&#xA;At Juno&amp;rsquo;s suit the heavenly factions end.&lt;br&gt;&#xA;Destruction hangs o&amp;rsquo;er yon devoted wall,&lt;br&gt;&#xA;And nodding Ilion waits the impending fall.&amp;rdquo;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

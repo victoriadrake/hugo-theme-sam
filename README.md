@@ -32,7 +32,7 @@ Preview the theme by cloning this repository and running the example site.
 
 ```sh
 git clone https://github.com/victoriadrake/hugo-theme-sam.git themes/sam
-cd exampleSite && HUGO_THEME="hugo-theme-sam" hugo server --themesDir ../.. -v
+cd exampleSite && HUGO_THEME="hugo-theme-sam" hugo server --themesDir ../..
 ```
 
 ## Requirements

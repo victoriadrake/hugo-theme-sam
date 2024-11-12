@@ -25,12 +25,11 @@ jobs:
       - run: npm i -g postcss postcss-cli autoprefixer
       - name: 🤵 Install Hugo
         run: |
-          HUGO_VERSION=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | jq -r '.tag_name')
-          mkdir tmp/ && cd tmp/
-          curl -sSL https://github.com/gohugoio/hugo/releases/download/${HUGO_VERSION}/hugo_extended_${HUGO_VERSION: -6}_Linux-64bit.tar.gz | tar -xvzf-
-          sudo mv hugo /usr/local/bin/
-          cd .. && rm -rf tmp/
-          hugo version
+            sudo apt-get install jq
+            HUGO_VERSION=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | jq -r '.tag_name')
+            curl -sSL "https://github.com/gohugoio/hugo/releases/download/${HUGO_VERSION}/hugo_extended_${HUGO_VERSION:1}_linux-amd64.deb" -o hugo.deb
+            sudo dpkg -i hugo.deb
+            hugo version
       - name: 🧹 Clean site
         run: |
           if [ -d "docs" ]; then

@@ -1,40 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>poem on Call me Sam</title>
+    <title>Poem on Call me Sam</title>
     <link>https://victoria.dev/hugo-theme-sam/tags/poem/</link>
-    <description>Recent content in poem on Call me Sam</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Poem on Call me Sam</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 13 Feb 2018 13:56:12 -0500</lastBuildDate><atom:link href="https://victoria.dev/hugo-theme-sam/tags/poem/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Feb 2018 13:56:12 -0500</lastBuildDate>
+    <atom:link href="https://victoria.dev/hugo-theme-sam/tags/poem/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>`Code` Poetry</title>
       <link>https://victoria.dev/hugo-theme-sam/posts/code-poetry/</link>
       <pubDate>Tue, 13 Feb 2018 13:56:12 -0500</pubDate>
-      
       <guid>https://victoria.dev/hugo-theme-sam/posts/code-poetry/</guid>
-      <description>Pseudo code poem.
-if (this === that): try write_new_poem() except not_a_poet as e: return e e cummings?
-console.log(&amp;#39;eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&amp;#39;) An embedded gist using shortcode:
- </description>
+      <description>&lt;p&gt;Pseudo &lt;code&gt;code&lt;/code&gt; poem.&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;===&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;that&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;write_new_poem&lt;/span&gt;()&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#a6e22e&#34;&gt;except&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;not_a_poet&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;as&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;e&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;e e cummings?&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-js&#34; data-lang=&#34;js&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;console&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;log&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee&amp;#39;&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;An embedded gist using shortcode:&lt;/p&gt;&#xA;&lt;script src=&#34;https://gist.github.com/spf13/7896402.js?file=img.html&#34;&gt;&lt;/script&gt;</description>
     </item>
-    
     <item>
       <title>A Poem</title>
       <link>https://victoria.dev/hugo-theme-sam/posts/a-poem/</link>
       <pubDate>Thu, 01 Feb 2018 12:35:11 -0500</pubDate>
-      
       <guid>https://victoria.dev/hugo-theme-sam/posts/a-poem/</guid>
-      <description>Now pleasing sleep had seal&amp;rsquo;d each mortal eye,
-Stretch&amp;rsquo;d in the tents the Grecian leaders lie:
-The immortals slumber&amp;rsquo;d on their thrones above;
-All, but the ever-wakeful eyes of Jove.(76)
-To honour Thetis&#39; son he bends his care,
-And plunge the Greeks in all the woes of war:
-Then bids an empty phantom rise to sight,
-And thus commands the vision of the night.
-&amp;ldquo;Fly hence, deluding Dream! and light as air,(77)</description>
+      <description>&lt;p&gt;Now pleasing sleep had seal&amp;rsquo;d each mortal eye,&lt;br&gt;&#xA;Stretch&amp;rsquo;d in the tents the Grecian leaders lie:&lt;br&gt;&#xA;The immortals slumber&amp;rsquo;d on their thrones above;&lt;br&gt;&#xA;All, but the ever-wakeful eyes of Jove.(76)&lt;br&gt;&#xA;To honour Thetis&amp;rsquo; son he bends his care,&lt;br&gt;&#xA;And plunge the Greeks in all the woes of war:&lt;br&gt;&#xA;Then bids an empty phantom rise to sight,&lt;br&gt;&#xA;And thus commands the vision of the night.&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;Fly hence, deluding Dream! and light as air,(77)&lt;br&gt;&#xA;To Agamemnon&amp;rsquo;s ample tent repair.&lt;br&gt;&#xA;Bid him in arms draw forth the embattled train,&lt;br&gt;&#xA;Lead all his Grecians to the dusty plain.&lt;br&gt;&#xA;Declare, e&amp;rsquo;en now &amp;rsquo;tis given him to destroy&lt;br&gt;&#xA;The lofty towers of wide-extended Troy.&lt;br&gt;&#xA;For now no more the gods with fate contend,&lt;br&gt;&#xA;At Juno&amp;rsquo;s suit the heavenly factions end.&lt;br&gt;&#xA;Destruction hangs o&amp;rsquo;er yon devoted wall,&lt;br&gt;&#xA;And nodding Ilion waits the impending fall.&amp;rdquo;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

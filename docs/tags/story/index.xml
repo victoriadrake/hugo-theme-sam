@@ -1,41 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>story on Call me Sam</title>
+    <title>Story on Call me Sam</title>
     <link>https://victoria.dev/hugo-theme-sam/tags/story/</link>
-    <description>Recent content in story on Call me Sam</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Story on Call me Sam</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 19 Feb 2018 12:41:46 -0500</lastBuildDate><atom:link href="https://victoria.dev/hugo-theme-sam/tags/story/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 19 Feb 2018 12:41:46 -0500</lastBuildDate>
+    <atom:link href="https://victoria.dev/hugo-theme-sam/tags/story/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>**Image** post</title>
       <link>https://victoria.dev/hugo-theme-sam/posts/image-post/</link>
       <pubDate>Mon, 19 Feb 2018 12:41:46 -0500</pubDate>
-      
       <guid>https://victoria.dev/hugo-theme-sam/posts/image-post/</guid>
-      <description>Hello! I&amp;rsquo;m a blog post with an image. Thanks to Open Graph and Twitter metadata, external links to this page will feature the image below.
-To make this happen, set the images parameter in your post&amp;rsquo;s front-matter, like this YAML example:
-images: - /posts/ideas.png </description>
+      <description>&lt;p&gt;Hello! I&amp;rsquo;m a blog post with an image. Thanks to Open Graph and Twitter metadata, external links to this page will feature the image below.&lt;/p&gt;&#xA;&lt;p&gt;&lt;p style=&#34;text-align:center;&#34;&gt;&#xA;    &lt;img src=&#34;https://victoria.dev/hugo-theme-sam/posts/ideas.png&#34; alt=&#34;Ideas&#34;  /&gt;&#xA;&lt;/p&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;To make this happen, set the &lt;code&gt;images&lt;/code&gt; parameter in your post&amp;rsquo;s &lt;a href=&#34;https://gohugo.io/content-management/front-matter/&#34;&gt;front-matter&lt;/a&gt;, like this YAML example:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;images&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;/posts/ideas.png&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
     <item>
       <title>Dear Jane, regarding Mr. Bennet</title>
       <link>https://victoria.dev/hugo-theme-sam/posts/dear-jane/</link>
       <pubDate>Sun, 11 Feb 2018 12:34:41 -0500</pubDate>
-      
       <guid>https://victoria.dev/hugo-theme-sam/posts/dear-jane/</guid>
-      <description>Chapter One&amp;nbsp;¶ It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.
-However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of their daughters.</description>
+      <description>&lt;h1 id=&#34;chapter-one&#34; class=&#34;anchor-link&#34;&gt;&lt;a href=&#34;#chapter-one&#34;&gt;Chapter One&lt;span class=&#34;pilcrow&#34;&gt;&amp;nbsp;¶&lt;/span&gt;&lt;/a&gt;&lt;/h1&gt;&#xA;&lt;p&gt;It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.&lt;/p&gt;&#xA;&lt;p&gt;However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of their daughters.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Oh, Alice</title>
       <link>https://victoria.dev/hugo-theme-sam/posts/oh-alice/</link>
       <pubDate>Fri, 09 Feb 2018 12:32:12 -0500</pubDate>
-      
       <guid>https://victoria.dev/hugo-theme-sam/posts/oh-alice/</guid>
-      <description>Nor did such soothing scenes, however temporary, fail of at least as temporary an effect on Ahab. But if these secret golden keys did seem to open in him his own secret golden treasuries, yet did his breath upon them prove but tarnishing. Alice opened the door and found that it led into a small passage, not much larger than a rat-hole: she knelt down and looked along the passage into the loveliest garden you ever saw.</description>
+      <description>&lt;p&gt;Nor did such soothing scenes, however temporary, fail of at least as temporary an effect on Ahab. But if these secret golden keys did seem to open in him his own secret golden treasuries, yet did his breath upon them prove but tarnishing. Alice opened the door and found that it led into a small passage, not much larger than a rat-hole: she knelt down and looked along the passage into the loveliest garden you ever saw. How she longed to get out of that dark hall, and wander about among those beds of bright flowers and those cool fountains, but she could not even get her head through the doorway; &amp;ldquo;and even if my head would go through,&amp;rdquo; thought poor Alice, &amp;ldquo;it would be of very little use without my shoulders. After a time she heard a little pattering of feet. In the distance, and she hastily dried her eyes to see what was coming. It was the White Rabbit returning, splendidly dressed, with a pair of white kid-gloves in one hand and a large fan in the other: he came trotting along in a great hurry, muttering to himself, as he came, &amp;ldquo;Oh! The Duchess, the Duchess! Oh! Won&amp;rsquo;t she be savage if I&amp;rsquo;ve kept her waiting!&amp;rdquo;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

@@ -1,40 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>blog on Call me Sam</title>
+    <title>Blog on Call me Sam</title>
     <link>https://victoria.dev/hugo-theme-sam/tags/blog/</link>
-    <description>Recent content in blog on Call me Sam</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Blog on Call me Sam</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 16 Mar 2018 20:18:53 -0500</lastBuildDate><atom:link href="https://victoria.dev/hugo-theme-sam/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 16 Mar 2018 20:18:53 -0500</lastBuildDate>
+    <atom:link href="https://victoria.dev/hugo-theme-sam/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Video post</title>
       <link>https://victoria.dev/hugo-theme-sam/posts/video-post/</link>
       <pubDate>Fri, 16 Mar 2018 20:18:53 -0500</pubDate>
-      
       <guid>https://victoria.dev/hugo-theme-sam/posts/video-post/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus eget nunc scelerisque viverra. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Pharetra magna ac placerat vestibulum lectus mauris. Eget lorem dolor sed viverra ipsum. Elementum nisi quis eleifend quam adipiscing. Aliquet nec ullamcorper sit amet risus. Auctor neque vitae tempus quam pellentesque. Tincidunt lobortis feugiat vivamus at augue.</description>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;&#xA;  &lt;iframe src=&#34;https://player.vimeo.com/video/146022717&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;vimeo video&#34; webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus eget nunc scelerisque viverra. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Pharetra magna ac placerat vestibulum lectus mauris. Eget lorem dolor sed viverra ipsum. Elementum nisi quis eleifend quam adipiscing. Aliquet nec ullamcorper sit amet risus. Auctor neque vitae tempus quam pellentesque. Tincidunt lobortis feugiat vivamus at augue. Leo vel orci porta non pulvinar neque laoreet. Non enim praesent elementum facilisis leo vel.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>_Long_ Form Post</title>
       <link>https://victoria.dev/hugo-theme-sam/posts/long-form-post/</link>
       <pubDate>Thu, 08 Mar 2018 20:18:53 -0500</pubDate>
-      
       <guid>https://victoria.dev/hugo-theme-sam/posts/long-form-post/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus eget nunc scelerisque viverra. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Pharetra magna ac placerat vestibulum lectus mauris. Eget lorem dolor sed viverra ipsum. Elementum nisi quis eleifend quam adipiscing. Aliquet nec ullamcorper sit amet risus. Auctor neque vitae tempus quam pellentesque. Tincidunt lobortis feugiat vivamus at augue.</description>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cursus eget nunc scelerisque viverra. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Pharetra magna ac placerat vestibulum lectus mauris. Eget lorem dolor sed viverra ipsum. Elementum nisi quis eleifend quam adipiscing. Aliquet nec ullamcorper sit amet risus. Auctor neque vitae tempus quam pellentesque. Tincidunt lobortis feugiat vivamus at augue. Leo vel orci porta non pulvinar neque laoreet. Non enim praesent elementum facilisis leo vel.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>**Image** post</title>
       <link>https://victoria.dev/hugo-theme-sam/posts/image-post/</link>
       <pubDate>Mon, 19 Feb 2018 12:41:46 -0500</pubDate>
-      
       <guid>https://victoria.dev/hugo-theme-sam/posts/image-post/</guid>
-      <description>Hello! I&amp;rsquo;m a blog post with an image. Thanks to Open Graph and Twitter metadata, external links to this page will feature the image below.
-To make this happen, set the images parameter in your post&amp;rsquo;s front-matter, like this YAML example:
-images: - /posts/ideas.png </description>
+      <description>&lt;p&gt;Hello! I&amp;rsquo;m a blog post with an image. Thanks to Open Graph and Twitter metadata, external links to this page will feature the image below.&lt;/p&gt;&#xA;&lt;p&gt;&lt;p style=&#34;text-align:center;&#34;&gt;&#xA;    &lt;img src=&#34;https://victoria.dev/hugo-theme-sam/posts/ideas.png&#34; alt=&#34;Ideas&#34;  /&gt;&#xA;&lt;/p&gt;&#xA;&lt;/p&gt;&#xA;&lt;p&gt;To make this happen, set the &lt;code&gt;images&lt;/code&gt; parameter in your post&amp;rsquo;s &lt;a href=&#34;https://gohugo.io/content-management/front-matter/&#34;&gt;front-matter&lt;/a&gt;, like this YAML example:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;images&lt;/span&gt;:&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    - &lt;span style=&#34;color:#ae81ff&#34;&gt;/posts/ideas.png&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
-    
   </channel>
 </rss>
