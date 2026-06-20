@@ -1,5 +1,5 @@
 baseurl                  = "https://example.com"           # Your domain name
-languageCode             = "en-us"
+locale             = "en-us"
 defaultContentLanguage   = "en"
 isMultilingual           = false
 title                    = "Call me Sam"
