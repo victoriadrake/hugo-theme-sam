@@ -1,0 +1,3 @@
+{{- /* Replaces Hugo's built-in "gist" shortcode, removed in v0.156.0.
+       Usage: {{< gist user id [file] >}} */ -}}
+<script type="application/javascript" src="https://gist.github.com/{{ index .Params 0 }}/{{ index .Params 1 }}.js{{ with .Get 2 }}?file={{ . }}{{ end }}"></script>
