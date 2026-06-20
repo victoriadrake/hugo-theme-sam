@@ -1,0 +1,22 @@
+{{- if and .IsPage (not .Date.IsZero) -}}
+{{- $desc := cond (ne .Description "") .Description .Site.Params.description -}}
+{{- $img := "" -}}
+{{- with .Params.images }}{{ $img = (index . 0) | absURL }}{{ else }}{{ with $.Site.Params.images }}{{ $img = (index . 0) | absURL }}{{ end }}{{ end -}}
+{{- $authorName := "" -}}
+{{- with .Site.Params.author -}}
+    {{- if reflect.IsMap . -}}{{- $authorName = .name -}}{{- else -}}{{- $authorName = . -}}{{- end -}}
+{{- end -}}
+{{- $schema := dict
+    "@context" "https://schema.org"
+    "@type" "BlogPosting"
+    "headline" .Title
+    "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00")
+    "dateModified" (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+    "url" .Permalink
+    "mainEntityOfPage" .Permalink
+-}}
+{{- with $desc }}{{- $schema = merge $schema (dict "description" .) -}}{{- end -}}
+{{- with $img }}{{- $schema = merge $schema (dict "image" .) -}}{{- end -}}
+{{- with $authorName }}{{- $schema = merge $schema (dict "author" (dict "@type" "Person" "name" .) "publisher" (dict "@type" "Person" "name" .)) -}}{{- end -}}
+<script type="application/ld+json">{{ $schema | jsonify | safeJS }}</script>
+{{- end -}}

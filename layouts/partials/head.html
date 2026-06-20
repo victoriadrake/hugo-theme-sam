@@ -4,8 +4,10 @@
 <!-- Google fonts-->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Didact+Gothic">
 
+<link rel="canonical" href="{{ .Permalink }}" />
 {{ template "_internal/twitter_cards.html" . }}
 {{ template "_internal/opengraph.html" . }}
+{{ partial "head/schema.html" . }}
 {{ with site.Config.Services.GoogleAnalytics.ID }}
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
 <script>

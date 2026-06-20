@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ or site.Language.LanguageCode site.LanguageCode `en` }}">
 
 <head>
     {{ partial "head.html" . }}
-    <title>{{ .Title | markdownify }}</title>
 </head>
 
 <body>
