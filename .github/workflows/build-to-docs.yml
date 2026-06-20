@@ -12,16 +12,16 @@ jobs:
 
     steps:
       - name: 🛎 Check out master
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
       - name: 🔧 Install tools
         run: |
           sudo apt install curl jq
       - name: Use Node.js
-        uses: actions/setup-node@master
+        uses: actions/setup-node@v4
         with:
-          node-version: 10.x
+          node-version: lts/*
       - run: npm i -g postcss postcss-cli autoprefixer
       - name: 🤵 Install Hugo
         run: |

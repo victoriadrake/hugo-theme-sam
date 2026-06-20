@@ -4,13 +4,16 @@ on:
   push:
     branches:
       - master
+  pull_request:
+    branches:
+      - master
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        hugo: ['0.135.0', '0.136.5', '0.137.1', '0.138.0']
+        hugo: ['0.138.0', '0.163.0', 'latest']
     
       fail-fast: true
 
