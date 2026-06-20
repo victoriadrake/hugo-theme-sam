@@ -259,7 +259,7 @@ Open source themes like this one would not be possible without some amazing **[c
 
 ## License
 
-Copyright (C) 2018-2025 [Victoria Drake](https://victoria.dev/)
+Copyright (C) 2018-2026 [Victoria Drake](https://victoria.dev/)
 
 Licensed under the [Apache License, Version 2.0](https://github.com/victoriadrake/hugo-theme-sam/blob/master/LICENSE) (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at [http://www.apache.org/licenses/LICENSE-2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
