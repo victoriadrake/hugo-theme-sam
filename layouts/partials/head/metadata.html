@@ -7,7 +7,7 @@
 {{ with or .Description .Site.Params.description }}
 <meta name="description" content="{{ . }}">{{ end }}
 <title>
-    {{ .Title | markdownify }}{{ if ne .Title .Site.Title }} - {{ .Site.Title | markdownify }}{{ end }}
+    {{ .Title | markdownify | plainify }}{{ if ne .Title .Site.Title }} - {{ .Site.Title | markdownify | plainify }}{{ end }}
 </title>
 <!-- RSS -->
 {{- with .OutputFormats.Get "RSS" -}}
@@ -15,5 +15,5 @@
 {{- if $.Site.Params.rss -}}
 {{ $rss = $.Site.Params.rss }}
 {{- end -}}
-<link href="{{ $rss }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title | markdownify}}" />
+<link href="{{ $rss }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title | markdownify | plainify}}" />
 {{- end -}}

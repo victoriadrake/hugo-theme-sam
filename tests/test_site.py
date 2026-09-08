@@ -37,6 +37,7 @@ class SiteTests(unittest.TestCase):
         self.assertEqual(errors, [])
         html = (self.output / "posts/image-post/index.html").read_text()
         self.assertIn('content="A page-specific description."', html)
+        self.assertIn('<title>Image post - Call me Sam</title>', html)
         self.assertIn("https://victoria.dev/hugo-theme-sam/posts/ideas.png", html)
         self.assertIn('src=/hugo-theme-sam/posts/ideas.png', html)
         home = (self.output / "index.html").read_text()
