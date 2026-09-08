@@ -1,13 +1,14 @@
 baseurl                  = "https://example.com"           # Your domain name
 locale             = "en-us"
 defaultContentLanguage   = "en"
-isMultilingual           = false
 title                    = "Call me Sam"
 theme                    = "github.com/victoriadrake/hugo-theme-sam"    # pull in theme as hugo module 
 # theme                  = "sam"                      # install theme locally (git clone or submodule)
-pygmentsStyle            = "monokai"                        # https://help.farbox.com/pygments.html
-pygmentsCodefences       = true
-# googleAnalytics        = ""                               # Tracking code, eg. "UA-111111111-1"
+[markup.highlight]
+    style = "monokai"
+
+# [services.googleAnalytics]
+#     ID = "G-XXXXXXXXXX"
 
 [params]
     dateform             = "Mon Jan 02, 2006"
@@ -25,8 +26,8 @@ pygmentsCodefences       = true
 [[params.videoBackground.sources]]
     source  = "/sample_video.mp4"
     type    = "video/mp4"
-    poster  = "/background.png"
 [params.videoBackground]
+    poster = "/background.png"
     overlay = "rgba(0, 0, 0, 0.4)" # optional
 
 [[params.mainMenu]]

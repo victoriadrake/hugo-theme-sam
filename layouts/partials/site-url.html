@@ -1,0 +1,10 @@
+{{- /* Resolve site-relative URLs under baseURL without duplicating its path. */ -}}
+{{- $url := . -}}
+{{- $parsed := urls.Parse $url -}}
+{{- if and (not $parsed.Scheme) (not $parsed.Host) (not (hasPrefix $url "#")) -}}
+  {{- $basePath := (urls.Parse site.BaseURL).Path -}}
+  {{- if not (and (ne $basePath "/") (ne $basePath "") (or (hasPrefix $url $basePath) (eq $url (strings.TrimSuffix "/" $basePath)))) -}}
+    {{- $url = strings.TrimPrefix "/" $url | relURL -}}
+  {{- end -}}
+{{- end -}}
+{{- return $url -}}

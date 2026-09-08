@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ or site.Language.LanguageCode site.LanguageCode `en` }}">
+<html lang="{{ or site.Language.Locale `en` }}">
 
 <head>
     {{ partial "head.html" . }}
@@ -7,24 +7,24 @@
 
 <body>
     {{ with .Site.Params.videoBackground }}
-        <video class="video" autoplay muted preload loop playsinline>
+        {{ $poster := .poster }}
+        {{ if not $poster }}{{ with index .sources 0 }}{{ $poster = .poster }}{{ end }}{{ end }}
+        <video id="background-video" class="video" muted preload="none" loop playsinline aria-hidden="true"{{ with $poster }} poster="{{ partial "site-url.html" . }}"{{ end }}>
             {{ range .sources }}
-                <source
-                    src="{{ .source }}"
-                    type="{{ .type }}"
-                    poster="{{ .poster }}" />
+                <source src="{{ partial "site-url.html" .source }}" type="{{ .type }}">
             {{ end }}
         </video>
-        {{ with .overlay }}
-            <div id="overlay" style="background: {{ . | safeCSS }};"></div>
-        {{ end }}
+        {{ with .overlay }}<div id="overlay" style="background: {{ . | safeCSS }};"></div>{{ end }}
+        <button class="video-toggle" aria-controls="background-video" hidden>Play background video</button>
+        {{ $videoScript := resources.Get "js/video.js" | minify | fingerprint }}
+        <script src="{{ $videoScript.RelPermalink }}" integrity="{{ $videoScript.Data.Integrity }}" defer></script>
     {{ end }}
 
     <nav role="navigation" class="flex-container" id="splash">
 
         {{ if .Site.Params.mainMenu }}
         {{ range .Site.Params.mainMenu }}
-            <a href="{{.link}}" class="big-link">
+            <a href="{{ partial "site-url.html" .link }}" class="big-link">
                 {{.text}}
             </a>
         {{ end }}

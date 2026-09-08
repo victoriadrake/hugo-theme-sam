@@ -16,6 +16,19 @@ Please [fork the repository](https://help.github.com/en/github/getting-started-w
 
 Before you submit your PR, make sure your fork is [synced with `master`](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork), then [create a PR](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork). You may want to [allow edits from maintainers](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/allowing-changes-to-a-pull-request-branch-created-from-a-fork) for help with small changes like fixing typos.
 
+## Validation
+
+Use Hugo Extended 0.163.0+, Node 24, Python 3.9+, and Google Chrome. From the repository root, run:
+
+```sh
+npm ci --ignore-scripts
+npm test
+npm run build
+npm run check:html
+```
+
+Please add a regression check when fixing build or browser behavior. Do not commit generated output, caches, or installers. See the README for the demo deployment workflow.
+
 ## Thank you!
 
 Thank you for being a part of this open source project. 💕

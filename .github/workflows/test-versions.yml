@@ -1,48 +1,32 @@
 name: test-versions
-
 on:
   push:
-    branches:
-      - master
+    branches: [master]
   pull_request:
-    branches:
-      - master
-
+    branches: [master]
+permissions:
+  contents: read
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         hugo: ['0.163.0', 'latest']
-    
-      fail-fast: true
-
-
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Node
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.0.0
         with:
-          node-version: lts/*
-      - name: Install tools
-        run: |
-          sudo apt install curl jq
-          npm i -g postcss postcss-cli autoprefixer
-
-      - name: Test with Hugo ${{ matrix.hugo }}
-        uses: peaceiris/actions-hugo@v3
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.12'
+      - uses: peaceiris/actions-hugo@v3.2.1
         with:
           hugo-version: ${{ matrix.hugo }}
           extended: true
-
-      - name: Update Submodules to Latest
-        run: |
-          git submodule update --init --recursive --remote
-
-      - name: Build with Hugo ${{ matrix.hugo }}
-        run: |
-          cd exampleSite && HUGO_THEME="hugo-theme-sam" hugo --themesDir ../..
-
-      - name: Test HTML from Hugo ${{ matrix.hugo }}
-        run: docker run -v ${GITHUB_WORKSPACE}/public/:/mnt 18fgsa/html-proofer mnt --disable-external
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      - run: npm run build
+      - run: npm run check:html

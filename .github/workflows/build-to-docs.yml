@@ -1,50 +1,49 @@
-name: Build exampleSite to docs/
-
+name: Deploy demo to Pages
 on:
   push:
-    branches:
-      - master
-
+    branches: [master]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
 jobs:
   build:
-
+    permissions:
+      contents: read
+      pages: read
     runs-on: ubuntu-latest
-
     steps:
-      - name: 🛎 Check out master
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-node@v7.0.0
         with:
-          fetch-depth: 1
-      - name: 🔧 Install tools
-        run: |
-          sudo apt install curl jq
-      - name: Use Node.js
-        uses: actions/setup-node@v4
+          node-version: '24'
+          cache: npm
+      - uses: actions/setup-python@v7.0.0
         with:
-          node-version: lts/*
-      - run: npm i -g postcss postcss-cli autoprefixer
-      - name: 🤵 Install Hugo
-        run: |
-            sudo apt-get install jq
-            HUGO_VERSION=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | jq -r '.tag_name')
-            curl -sSL "https://github.com/gohugoio/hugo/releases/download/${HUGO_VERSION}/hugo_extended_${HUGO_VERSION:1}_linux-amd64.deb" -o hugo.deb
-            sudo dpkg -i hugo.deb
-            hugo version
-      - name: 🧹 Clean site
-        run: |
-          if [ -d "docs" ]; then
-            rm -rf docs/*
-          fi
-      - name: 🍳 Build site
-        run: |
-          git submodule update --init --recursive --remote
-          cd exampleSite
-          HUGO_THEME="hugo-theme-sam" hugo --themesDir ../.. -d ../docs/ -b https://victoria.dev/hugo-theme-sam
-      - name: 🚀 Deploy build
-        run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-          git add .
-          git commit -am "🚀 Deploy with ${GITHUB_WORKFLOW}"
-          git push --all -f https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
-          
+          python-version: '3.12'
+      - uses: peaceiris/actions-hugo@v3.2.1
+        with:
+          hugo-version: '0.165.0'
+          extended: true
+      - uses: actions/configure-pages@v6.0.0
+      - run: npm ci --ignore-scripts
+      - run: npm test
+      - run: npm run build
+      - run: npm run check:html
+      - uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: public
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v5.0.1
+        id: deployment

@@ -1,0 +1,53 @@
+{{/* Adapted from Hugo v0.165.0 (Apache-2.0) to preserve the configured base path. */}}
+{{- $imgs := slice }}
+{{- $imgParams := .Params.images }}
+{{- $resources := .Resources.ByType "image" -}}
+{{/* Find featured image resources if the images parameter is empty. */}}
+{{- if not $imgParams }}
+	{{- $featured := $resources.GetMatch "*feature*" -}}
+	{{- if not $featured }}{{ $featured = $resources.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+	{{- with $featured }}
+		{{- $imgs = $imgs | append (dict
+			"Image" .
+			"RelPermalink" .RelPermalink
+			"Permalink" .Permalink
+			)
+		}}
+	{{- end }}
+{{- end }}
+{{/* Use the first one of site images as the fallback. */}}
+{{- if and (not $imgParams) (not $imgs) }}
+	{{- with site.Params.images }}
+		{{- $imgParams = first 1 . }}
+	{{- end }}
+{{- end }}
+{{/* Parse page's images parameter. */}}
+{{- range $imgParams }}
+	{{- $img := . }}
+	{{- $url := urls.Parse $img }}
+	{{- if eq $url.Scheme "" }}
+		{{/* Internal image: check page resources first, then global resources. */}}
+		{{- with or ($resources.GetMatch $img) (resources.GetMatch $img) -}}
+			{{- $imgs = $imgs | append (dict
+				"Image" .
+				"RelPermalink" .RelPermalink
+				"Permalink" .Permalink
+				)
+			}}
+		{{- else }}
+			{{- $imgs = $imgs | append (dict
+				"RelPermalink" (partial "site-url.html" $img)
+				"Permalink" (partial "site-url.html" $img | absURL)
+				)
+			}}
+		{{- end }}
+	{{- else }}
+		{{/* External image */}}
+		{{- $imgs = $imgs | append (dict
+			"RelPermalink" $img
+			"Permalink" $img
+			)
+		}}
+	{{- end }}
+{{- end }}
+{{- return $imgs }}

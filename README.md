@@ -24,47 +24,46 @@ Focused on content and typography, the stylized index page is really just a list
   - Syntax highlighting
   - Share-ready pages with [Open Graph](https://gohugo.io/templates/internal/#open-graph) and [Twitter](https://gohugo.io/templates/internal/#twitter-cards) metadata you can customize in `config.toml` and page front-matter
   - Effortless use of Hugo Pipes to generate CSS from Sass files
-  - Tested for compatibility with Hugo versions as far back as `0.49.2`
+  - Tested with Hugo Extended `0.163.0` and the latest release
 
 ## Quick start
 
-Preview the theme by cloning this repository and running the example site.
+Preview the example site with Hugo Extended **0.163.0 or newer** and Node.js **22.12 or newer** (Node 24 recommended):
 
 ```sh
-git clone https://github.com/victoriadrake/hugo-theme-sam.git themes/sam
-cd exampleSite && HUGO_THEME="hugo-theme-sam" hugo server --themesDir ../..
+git clone https://github.com/victoriadrake/hugo-theme-sam.git
+cd hugo-theme-sam
+npm ci --ignore-scripts
+npm run dev
 ```
+
+Open the localhost address printed by Hugo. `npm run build` creates the production demo in `public/`; `npm run check:html` checks the generated pages and their local assets.
 
 ## Requirements
 
-Requires the **extended** version of Hugo. You can find [installation instructions here](https://gohugo.io/getting-started/installing/) (latest version recommended). Here's a handy [Bash function for downloading a specific Hugo version](https://victoria.dev/blog/how-to-do-twice-as-much-with-half-the-keystrokes-using-.bashrc/#bash-function-for-downloading-extended-hugo).
+Use the **extended** edition of [Hugo](https://gohugo.io/installation/). The supported minimum is **0.163.0**. The demo deployment pins **0.165.0**, while CI tests the minimum and latest releases.
 
-Extended Hugo's [PostCSS](https://gohugo.io/hugo-pipes/postcss/) requires JavaScript packages to compile the styles for this theme. If you're seeing an error like this:
+Production CSS uses PostCSS and Autoprefixer. This repository pins its build and test dependencies in `package-lock.json`; use `npm ci --ignore-scripts` for repeatable installs. No global packages are required. The gallery's PhotoSwipe 5.4.4 files are vendored, so theme users do not need to install PhotoSwipe.
 
-```text
-Error: Error building site: POSTCSS failed to transform "css/main.css"
-```
-
-Install the required packages globally using `npm`. You'll need `postcss`, `postcss-cli`, and `autoprefixer`.
+For your own Hugo site, install these build dependencies **in your site root** and commit the resulting package manifest and lockfile:
 
 ```sh
-npm i -g postcss postcss-cli autoprefixer
+npm install --save-dev --save-exact --ignore-scripts postcss@8.5.28 postcss-cli@12.0.0 autoprefixer@10.5.5
 ```
 
-If you're new to Node.js and npm, [learn how to install and use npm here](https://www.npmjs.com/get-npm). It is recommended that you use a version manager for your Node.js installation, such as [`nvm`](https://github.com/nvm-sh/nvm).
-
-Note: If you are using [Hugo as a snap app](https://snapcraft.io/hugo), the above two Node.js packages have to be [installed locally inside `exampleSite`](https://gohugo.io/hugo-pipes/postcss/).
+On subsequent builds, use `npm ci --ignore-scripts`. Ensure the local tools are available when invoking Hugo:
 
 ```sh
-cd exampleSite/
-npm i postcss postcss-cli autoprefixer
+PATH="$PWD/node_modules/.bin:$PATH" hugo --minify
 ```
+
+Hugo's development server skips PostCSS, but production builds require these dependencies.
 
 ## 1. Get the theme
 
 ### Use the theme as hugo module
 
-1. Ensure that Go is installed (version >= 1.12). Download the Go installer [here](https://go.dev/dl/).
+1. Ensure that Go is installed. Download the Go installer [here](https://go.dev/dl/).
 
 2. Turn your new or existing site into a hugo module by issuing this command from site root:
 
@@ -179,9 +178,9 @@ To automagically generate a gallery from the images, set `type: "gallery"` in th
 
 - The gallery `title`
 - The page link with `url`
-- The `maxWidth` of the resized images
+- The `maxWidth` of the resized images (defaults to `"800x"`; use a positive width followed by `x`)
 - Whether you want the images to link to the full size files, with `clickablePhotos`
-- You can keep the orignal aspect ratio of the images in the grid with `keepAspectRatio`
+- You can keep the original aspect ratio of the images in the grid with `keepAspectRatio`
 
 Here is an example of a gallery's `_index.md`:
 
@@ -215,6 +214,22 @@ content/
 
 That's it! Sam's gallery layout template will automagically build the page from your images.
 
+Clickable galleries support keyboard activation, arrow navigation, Escape to close, and focus return. Without JavaScript, links open the full image. Reduced-motion preferences disable lightbox animations.
+
+Photo links use the image filename, so they remain valid when the gallery is reshuffled between builds. Legacy `gid=1&pid=1` links still use one-based positions in the current build. PhotoSwipe 5 replaces the old v4 lightbox; the old social-sharing and fullscreen buttons are no longer included. Copy the address while an image is open to share that image.
+
+You can provide meaningful image alt text through page resource metadata:
+
+```yaml
+resources:
+  - src: "tokyo.jpg"
+    params:
+      alt: "A lantern-lit street in Tokyo at night"
+```
+
+SVG images are displayed without raster resizing or a lightbox.
+
+
 ## Custom video background
 
 To change the default home page background to a looping video, you need to set a list of video sources and optionally an overlay color (default: `rgba(0, 0, 0, 0.4)`).
@@ -225,12 +240,14 @@ Here is an example configuration of `config.toml`:
 [[params.videoBackground.sources]]
     source  = "/background.mp4" # Your video file
     type    = "video/mp4"
-    poster  = "/background.jpg" # The image to show when the video isn't playing
 
 [params.videoBackground]
+    poster = "/background.jpg" # The image to show when the video is not playing
     overlay = "rgba(0, 0, 0, 0.4)" # optional
 
 ```
+
+The poster belongs to the video configuration, rather than each source. The former per-source `poster` setting remains supported as a fallback. Site-relative media paths work under a project subdirectory such as `/hugo-theme-sam/`. A playback button lets visitors pause the video; reduced-motion preferences keep it paused initially.
 
 And here is a screenshot of what that might look like:
 
@@ -246,6 +263,27 @@ If when building you do not see the changes you have done, make sure to build yo
 attempt to use its own cached Sass files.
 
 You can run the built-in server to preview the site as you make changes to the Sass files!
+
+## Validation and demo deployment
+
+Run the build and browser regression checks before submitting changes. Tests use Python 3.9+ and an installed Google Chrome browser; both are available on the GitHub-hosted Ubuntu runner.
+
+```sh
+npm ci --ignore-scripts
+npm test
+npm run build
+npm run check:html
+```
+
+The build helper can run from any working directory. `HUGO_BASEURL` overrides the demo URL; `HUGO_DESTINATION` overrides the output directory. Hugo cleans the selected output directory, so use a dedicated generated-output directory. Generated output, caches, and downloaded installers are excluded from source control.
+
+The demo is published by the **Deploy demo to Pages** GitHub Actions workflow. It tests and builds the site, validates the generated HTML, and uploads a Pages artifact; it never commits or force-pushes generated files. Production deployment is serialized and uses a pinned Hugo release.
+
+**Migration for this repository:** before publishing the new workflow, set **Settings → Pages → Build and deployment → Source** to **GitHub Actions**, replacing the old `master`/`docs` source. Keep the existing `victoria.dev/hugo-theme-sam/` project URL. This setting is on the Sam repository, not the main victoria.dev repository.
+
+## Metadata
+
+Each page's `description` overrides `params.description`. Social-preview images may be page resources, site-relative paths, or external URLs. Site-relative URLs retain the configured `baseURL` path. Set GA4 analytics with `[services.googleAnalytics]` and `ID = "G-XXXXXXXXXX"`; the old top-level `googleAnalytics` setting is no longer used.
 
 ## Issues
 

@@ -2,12 +2,12 @@
 
 {{ if hugo.IsServer }}
 {{ $cssOpts := (dict "targetPath" "css/main.css" "enableSourceMap" true ) }}
-{{ $bundle := $bundleRaw | toCSS $cssOpts }}
+{{ $bundle := $bundleRaw | css.Sass $cssOpts }}
 <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" media="screen">
 {{ else }}
 {{ $cssOpts := (dict "targetPath" "css/main.css" ) }}
 {{ $postCSSOpts := (dict "use" "autoprefixer" ) }}
-{{ $bundle := $bundleRaw | toCSS $cssOpts | postCSS $postCSSOpts | minify | fingerprint }}
+{{ $bundle := $bundleRaw | css.Sass $cssOpts | css.PostCSS $postCSSOpts | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}" crossorigin="anonymous" media="screen">
 {{ end }}
 
@@ -25,10 +25,7 @@
   {{- end }}
 {{ end }}
 
-<!-- PhotoSwipe -->
-{{ if eq .Type "gallery" }}
-{{ $photoswipe := "css/photoswipe.css" }}
-<link rel="stylesheet" href="{{ $photoswipe | absURL }}">
-{{ $defaultSkin := "css/default-skin.css" }}
-<link rel="stylesheet" href="{{ $defaultSkin | absURL }}">
+{{ if and (eq .Type "gallery") .Params.clickablePhotos }}
+{{ $photoswipe := resources.Get "css/photoswipe.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $photoswipe.RelPermalink }}" integrity="{{ $photoswipe.Data.Integrity }}" crossorigin="anonymous">
 {{ end }}

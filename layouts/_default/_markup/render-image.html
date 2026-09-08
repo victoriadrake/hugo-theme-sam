@@ -1,3 +1,8 @@
-<p style="text-align:center;">
-    <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}" {{ end }} />
-</p>
+{{- $src := .Destination -}}
+{{- $resource := .Page.Resources.Get .Destination -}}
+{{- with $resource -}}
+  {{- $src = .RelPermalink -}}
+{{- else -}}
+  {{- if hasPrefix $src "/" }}{{ $src = partial "site-url.html" $src }}{{ end -}}
+{{- end -}}
+<img class="content-image" src="{{ $src | safeURL }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy" decoding="async"{{ with $resource }}{{ if ne .MediaType.SubType "svg" }} width="{{ .Width }}" height="{{ .Height }}"{{ end }}{{ end }}>

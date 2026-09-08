@@ -1,7 +1,7 @@
 {{- if and .IsPage (not .Date.IsZero) -}}
 {{- $desc := cond (ne .Description "") .Description .Site.Params.description -}}
 {{- $img := "" -}}
-{{- with .Params.images }}{{ $img = (index . 0) | absURL }}{{ else }}{{ with $.Site.Params.images }}{{ $img = (index . 0) | absURL }}{{ end }}{{ end -}}
+{{- with partial "_funcs/get-page-images.html" . }}{{ $img = (index . 0).Permalink }}{{ end -}}
 {{- $authorName := "" -}}
 {{- with .Site.Params.author -}}
     {{- if reflect.IsMap . -}}{{- $authorName = .name -}}{{- else -}}{{- $authorName = . -}}{{- end -}}

@@ -166,3 +166,33 @@ article
     .video
         width: auto
         height: 100%
+
+.content-image
+    height: auto
+
+.video-toggle
+    position: fixed
+    bottom: 1rem
+    right: 1rem
+    padding: .5rem .75rem
+    color: inherit
+    background: $dark-grey
+    border: 1px solid currentColor
+    cursor: pointer
+
+.grid > div > a:focus-visible
+    outline: 3px solid currentColor
+    outline-offset: -3px
+    display: block
+    height: 100%
+
+.grid.keep-aspect-ratio img
+    height: auto
+
+@media (prefers-reduced-motion: reduce)
+    *, *::before, *::after
+        transition-duration: 0s !important
+        animation-duration: 0s !important
+
+html.sam-gallery-open
+    overflow: hidden

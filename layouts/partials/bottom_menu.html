@@ -12,19 +12,19 @@
 
     {{ if .Page.Site.Params.mainMenu }}
         {{ range first 1 .Page.Site.Params.mainMenu }}
-            <a href="{{ .link | relURL }}">{{ .text }}</a>
+            <a href="{{ partial "site-url.html" .link }}">{{ .text }}</a>
         {{ end }}
     
     {{ if ( gt ( len .Page.Site.Params.mainMenu ) 1 ) }}
         {{ range after 1 .Page.Site.Params.mainMenu }}
             &#183; 
-            <a href="{{ .link | relURL }}">{{ .text }}</a>
+            <a href="{{ partial "site-url.html" .link }}">{{ .text }}</a>
         {{ end }}
     {{ end }}
     
     {{ if .Page.Site.Params.homepage }}
         &#183; 
-        <a href="{{ .Site.Home | relURL }}">
+        <a href="{{ .Page.Site.Home.RelPermalink }}">
             {{ .Page.Site.Params.homepage }}
         </a>
     {{ end }}

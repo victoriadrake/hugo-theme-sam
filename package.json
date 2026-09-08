@@ -1,0 +1,23 @@
+{
+  "name": "hugo-theme-sam",
+  "version": "4.0.2",
+  "description": "A simple and minimalist Hugo theme.",
+  "repository": {
+    "url": "https://github.com/victoriadrake/hugo-theme-sam"
+  },
+  "scripts": {
+    "build": "sh scripts/build_docs.sh",
+    "dev": "sh scripts/build_docs.sh server --disableFastRender",
+    "test": "python3 -m unittest discover -s tests -v && node --test tests/browser.test.cjs",
+    "check:html": "python3 scripts/check_html.py public --base-url https://victoria.dev/hugo-theme-sam/ --forbid-host example.com --allow-url https://victoria.dev/"
+  },
+  "devDependencies": {
+    "autoprefixer": "10.5.5",
+    "postcss": "8.5.28",
+    "postcss-cli": "12.0.0",
+    "playwright-core": "1.63.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

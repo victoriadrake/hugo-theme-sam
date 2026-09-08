@@ -1,0 +1,3 @@
+# Preserve vendored PhotoSwipe release files, including upstream whitespace.
+assets/js/vendor/* -whitespace
+assets/css/photoswipe.css -whitespace
