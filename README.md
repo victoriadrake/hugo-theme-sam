@@ -39,6 +39,8 @@ npm run dev
 
 Open the localhost address printed by Hugo. `npm run build` creates the production demo in `public/`; `npm run check:html` checks the generated pages and their local assets.
 
+Dart Sass is required for development and production builds. Install it with `python3 scripts/install_dart_sass.py` (macOS/Linux), or follow the [Hugo Dart Sass instructions](https://gohugo.io/installation/dart-sass/). The helper verifies a pinned release checksum and installs into `.tools/dart-sass`; add that directory to `PATH` when invoking Hugo directly. CI and the demo use the same pinned compiler. Legacy theme and vendored Sass syntax remains supported; selected Dart Sass language deprecation notices are silenced until those stylesheets are migrated.
+
 ## Requirements
 
 Use the **extended** edition of [Hugo](https://gohugo.io/installation/). The supported minimum is **0.163.0**. The demo deployment pins **0.165.0**, while CI tests the minimum and latest releases.

@@ -7,3 +7,6 @@ exampleSite/.hugo_build.lock
 exampleSite/resources/
 hugo.deb
 __pycache__/
+
+# Pinned local Dart Sass compiler
+.tools/

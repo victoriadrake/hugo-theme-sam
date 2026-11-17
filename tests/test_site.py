@@ -7,6 +7,7 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
+os.environ["PATH"] = str(ROOT / ".tools/dart-sass") + os.pathsep + os.environ["PATH"]
 spec = importlib.util.spec_from_file_location("checker", ROOT / "scripts/check_html.py")
 checker = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(checker)
@@ -18,7 +19,7 @@ class SiteTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.theme = Path(self.temp.name) / "sam"
         shutil.copytree(ROOT, self.theme, ignore=shutil.ignore_patterns(
-            ".git", "node_modules", "resources", ".hugo-resources", "public", "docs", "__pycache__"))
+            ".git", ".tools", "node_modules", "resources", ".hugo-resources", "public", "docs", "__pycache__"))
         (self.theme / "node_modules").symlink_to(ROOT / "node_modules", target_is_directory=True)
         self.output = self.theme / "public"
 
