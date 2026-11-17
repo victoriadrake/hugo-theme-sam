@@ -46,5 +46,9 @@ theme                    = "github.com/victoriadrake/hugo-theme-sam"    # pull i
     link = "about"
     text = "who is sam?"
 
-[imaging]
+[imaging.jpeg]
+    quality = 75
+[imaging.webp]
+    quality = 75
+[imaging.avif]
     quality = 75

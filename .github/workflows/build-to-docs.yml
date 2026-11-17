@@ -23,6 +23,8 @@ jobs:
       - uses: actions/setup-python@v7.0.0
         with:
           python-version: '3.12'
+      - name: Install pinned Dart Sass
+        run: python3 scripts/install_dart_sass.py
       - uses: peaceiris/actions-hugo@v3.2.1
         with:
           hugo-version: '0.165.0'
